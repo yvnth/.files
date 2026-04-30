@@ -23,6 +23,7 @@
     cargo-seek
     cbonsai
     cointop
+    cmatrix
     cowsay
     direnv
     docker-buildx
@@ -103,7 +104,6 @@
     tty-clock
     typescript
     typst
-    unimatrix
     unzip
     uwufetch
     vscode
