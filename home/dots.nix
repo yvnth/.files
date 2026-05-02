@@ -10,6 +10,7 @@ in {
     ".config/lazydocker".source = mkOutOfStoreSymlink "${configDir}/lazydocker";
     ".config/lazygit".source = mkOutOfStoreSymlink "${configDir}/lazygit";
     ".config/niri".source = mkOutOfStoreSymlink "${configDir}/niri";
+    ".config/noctalia".source = mkOutOfStoreSymlink "${configDir}/noctalia";
     ".config/nvim".source = mkOutOfStoreSymlink "${configDir}/nvim";
     ".config/scripts".source = mkOutOfStoreSymlink "${configDir}/scripts";
     ".config/shell".source = mkOutOfStoreSymlink "${configDir}/shell";

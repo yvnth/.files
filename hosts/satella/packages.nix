@@ -73,6 +73,7 @@
     neovim
     nerdfetch
     nitch
+    noctalia-shell
     nodejs
     nsxiv
     nwg-look
