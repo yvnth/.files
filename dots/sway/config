@@ -3,6 +3,21 @@ set $term foot
 set $browser firefox
 set $fm nemo
 set $menu fuzzel
+set $lock swaylock \
+    --ignore-empty-password \
+    --indicator-thickness 15 \
+    --indicator-radius 150 \
+    --image ~/Pictures/walls/bsod.png \
+    --ring-color cba6f7 \
+    --key-hl-color a6e3a1 \
+    --line-color 00000000 \
+    --inside-color 1e1e2e88 \
+    --inside-clear-color 1e1e2e88 \
+    --text-color cdd6f4 \
+    --text-clear-color cdd6f4 \
+    --ring-clear-color cba6f7 \
+    --separator-color 00000000 \
+    --font "JetBrainsMono Nerd Font"
 
 font pango:JetBrainsMono Nerd Font Propo Bold 15
 
@@ -10,11 +25,13 @@ seat seat0 xcursor_theme Banana 40
 exec_always export XCURSOR_SIZE=40
 exec_always export XCURSOR_THEME=Banana
 
+
 gaps inner 3
 gaps outer 3
 default_border pixel 3
 
 focus_follows_mouse yes
+
 
 set $base #1e1e2e
 set $mauve #cba6f7
@@ -28,7 +45,9 @@ client.unfocused        $overlay0  $base     $text      $rosewater  $overlay0
 client.urgent           #f38ba8    $base     #f38ba8    $base       #f38ba8
 client.background       $base
 
+
 floating_modifier $mod
+
 
 exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec_always swaybg -i ~/Pictures/walls/nixppuccin.jpg -m fill
@@ -37,10 +56,11 @@ exec waybar
 exec ~/.config/sway/battery-warning.sh
 
 exec_always --no-startup-id sh -c 'pkill -x swayidle; swayidle -w \
-timeout 300 "swaylock --config ~/.config/swaylock/config" \
+timeout 300 "$lock" \
 timeout 600 "swaymsg output * dpms off" \
 resume "swaymsg output * dpms on" \
-before-sleep "swaylock --config ~/.config/swaylock/config"'
+before-sleep "$lock"'
+
 
 input * {
     xkb_layout us
@@ -58,19 +78,13 @@ input type:touchpad {
     natural_scroll enabled
 }
 
+
 bindsym $mod+Return exec $term
 bindsym $mod+space exec $menu
 bindsym $mod+Ctrl+space exec rofimoji --selector fuzzel
 bindsym $mod+n exec $fm
 bindsym $mod+b exec $browser
-bindsym $mod+Shift+Escape exec swaylock --config ~/.config/swaylock/config
-
-bindsym $mod+Shift+i exec $term --title wifi_tui -e nmtui
-bindsym $mod+Shift+b exec $term --title bluetui_tui -e bluetui
-
-for_window [title="wifi_tui"] floating enable, resize set 900 600, move position center
-for_window [title="bluetui_tui"] floating enable, resize set 900 600, move position center
-for_window [floating] border none
+bindsym $mod+Shift+Escape exec $lock
 
 bindsym Print exec sh -c 'grim -t ppm -g "$(slurp)" - | satty --filename - --fullscreen --copy-command wl-copy --output-filename ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png'
 bindsym Shift+Print exec sh -c 'if pgrep -x wl-screenrec > /dev/null; then pkill -SIGINT wl-screenrec && notify-send -u normal -t 4000 "🎬 Recording Saved" "✅ Video written to ~/Videos — ready to use!"; else FILE=~/Videos/$(date +%Y-%m-%d_%H-%M-%S).mp4; REGION=$(slurp) && wl-screenrec --geometry "$REGION" -f "$FILE" & notify-send -u critical -t 3000 "🔴 Recording in Progress" "🎯 Region locked — press Shift+Print again to stop"; fi'
@@ -82,6 +96,7 @@ bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec sh -c 'brightnessctl set 5%-; if [ $(brightnessctl get) -lt $(($(brightnessctl max) / 100)) ]; then brightnessctl set 1%; fi'
+
 
 bindsym $mod+q kill
 bindsym $mod+Shift+f fullscreen toggle
@@ -117,6 +132,7 @@ bindsym Mod1+Shift+j resize grow height 20 px
 bindsym Mod1+Shift+k resize shrink height 20 px
 bindsym Mod1+Shift+l resize grow width 20 px
 
+
 set $ws1  "1"
 set $ws2  "2"
 set $ws3  "3"
@@ -149,6 +165,7 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
 
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+c restart
