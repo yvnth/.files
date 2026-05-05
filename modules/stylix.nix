@@ -43,11 +43,5 @@
         popups = 15;
       };
     };
-
-    cursor = {
-      package = pkgs.banana-cursor;
-      name = "banana cursor";
-      size = 32;
-    };
   };
 }

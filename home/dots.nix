@@ -16,7 +16,6 @@ in {
     ".config/nvim".source = mkOutOfStoreSymlink "${configDir}/nvim";
     ".config/scripts".source = mkOutOfStoreSymlink "${configDir}/scripts";
     ".config/shell".source = mkOutOfStoreSymlink "${configDir}/shell";
-    ".config/starship".source = mkOutOfStoreSymlink "${configDir}/starship";
     ".config/sway".source = mkOutOfStoreSymlink "${configDir}/sway";
     ".config/tmux".source = mkOutOfStoreSymlink "${configDir}/tmux";
     ".config/waybar".source = mkOutOfStoreSymlink "${configDir}/waybar";

@@ -19,4 +19,3 @@ source ~/.config/shell/aliases
 
 eval "$(fzf --bash)"
 eval "$(zoxide init bash --cmd cd)"
-eval "$(starship init bash)"

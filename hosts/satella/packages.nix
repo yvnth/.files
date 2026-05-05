@@ -17,6 +17,7 @@
     age
     asciiquarium
     astroterm
+    banana-cursor
     bat
     bluetui
     brightnessctl
@@ -100,7 +101,6 @@
     sl
     slurp
     sops
-    starship
     swaybg
     swayidle
     swaylock
