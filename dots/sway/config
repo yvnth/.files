@@ -19,7 +19,7 @@ set $lock swaylock \
     --separator-color 00000000 \
     --font "JetBrainsMono Nerd Font"
 
-font pango:JetBrainsMono Nerd Font Propo Bold 15
+font pango:JetBrainsMono Nerd Font Bold 15
 
 seat seat0 xcursor_theme Banana 40
 exec_always export XCURSOR_SIZE=40
