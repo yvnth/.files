@@ -1,8 +1,8 @@
 keys:
-  - &yash2k4_satella age1wwjejapj7433z5rzjqtf5qd85kcwgus0434j0dzcrgt65na74grqsl8yh4
+    - &yash2k4_satella age1wwjejapj7433z5rzjqtf5qd85kcwgus0434j0dzcrgt65na74grqsl8yh4
 
 creation_rules:
-  - path_regex: secrets/.*\.(yaml|json|ini|env|bin)$
-    key_groups:
-      - age:
-          - *yash2k4_satella
+    - path_regex: secrets/.*\.(yaml|json|ini|env|bin)$
+      key_groups:
+          - age:
+                - *yash2k4_satella
