@@ -1,0 +1,35 @@
+theme = "catppuccin_mocha"
+
+[editor]
+color-modes = true
+clipboard-provider = "wayland"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.statusline]
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "S"
+left = ["mode", "separator", "file-name"]
+center = ["spinner"]
+right = ["diagnostics", "selections", "position", "file-encoding"]
+separator = ""
+
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+space = "·"
+tab = "→"
+tabpad = "·"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+character = "|"
+skip-levels = 1
