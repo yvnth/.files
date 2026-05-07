@@ -17,6 +17,7 @@ indent = { tab-width = 4, unit = "    " }
 name = "c-sharp"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+language-servers = ["omnisharp"]
 
 [[language]]
 name = "dockerfile"
@@ -59,6 +60,12 @@ auto-format = true
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]
+name = "php"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["phpactor"]
+
+[[language]]
 name = "python"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
@@ -67,6 +74,7 @@ indent = { tab-width = 4, unit = "    " }
 name = "qml"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+language-servers = ["qmlls"]
 
 [[language]]
 name = "rust"
@@ -92,6 +100,17 @@ indent = { tab-width = 4, unit = "    " }
 name = "zig"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+
+[language-server.omnisharp]
+command = "OmniSharp"
+args = ["--languageserver"]
+
+[language-server.phpactor]
+command = "phpactor"
+args = ["language-server"]
+
+[language-server.qmlls]
+command = "qmlls"
 
 [language-server.rust-analyzer]
 command = "rust-analyzer"

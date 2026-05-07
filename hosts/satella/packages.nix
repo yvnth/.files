@@ -2,6 +2,7 @@
 {
   fonts.packages = with pkgs; [
     lohit-fonts.tamil
+    noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
   ];
@@ -29,8 +30,8 @@
     cava
     cbonsai
     clang-tools
-    cointop
     cmatrix
+    cointop
     cowsay
     direnv
     docker-buildx
@@ -64,6 +65,7 @@
     just
     k9s
     kdePackages.kate
+    kdePackages.qtdeclarative
     kotlin
     kubectl
     kubernetes
@@ -90,10 +92,10 @@
     nixfmt
     nitch
     nodejs
-    noto-fonts
     nsxiv
     nwg-look
     obsidian
+    omnisharp-roslyn
     onefetch
     papirus-icon-theme
     pass
@@ -101,6 +103,7 @@
     pavucontrol
     pfetch-rs
     php
+    phpactor
     pipes
     postman
     pyright
