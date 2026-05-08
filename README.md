@@ -1,15 +1,6 @@
-<div align="center">
-
 # NixOS dotfiles ❄️
 
-![NixOS](https://img.shields.io/badge/NixOS-unstable-5277C3?style=for-the-badge&logo=nixos&logoColor=white)
-![Flakes](https://img.shields.io/badge/Flakes-enabled-5277C3?style=for-the-badge&logo=nixos&logoColor=white)
-![Home Manager](https://img.shields.io/badge/Home_Manager-enabled-5277C3?style=for-the-badge&logo=nixos&logoColor=white)
-![sops-nix](https://img.shields.io/badge/sops--nix-enabled-5277C3?style=for-the-badge&logo=gnupg&logoColor=white)
-
-</div>
-
-## Manual Install
+## Setup
 
 ### 1. Bootstrap
 
