@@ -25,7 +25,7 @@ seat seat0 xcursor_theme Banana 40
 exec_always export XCURSOR_SIZE=40
 exec_always export XCURSOR_THEME=Banana
 
-output eDP-1 mode 1920x1080@144Hz scale 1 transform 0
+output eDP-1 mode 1920x1080@144Hz scale 1.0 transform 0
 
 gaps inner 3
 gaps outer 3
