@@ -60,6 +60,7 @@
     jdk21
     jdt-language-server
     jetbrains.idea-oss
+    jetbrains.jdk-21
     jq
     jujutsu
     just
