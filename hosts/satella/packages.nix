@@ -89,7 +89,7 @@
     ncdu
     nemo
     nerdfetch
-    nil
+    nixd
     nixfmt
     nitch
     nodejs
@@ -107,13 +107,13 @@
     phpactor
     pipes
     postman
-    pyright
+    python3Packages.python-lsp-server
     python314
-    python314Packages.pip
     python314Packages.uv
     ripgrep
     rofimoji
     ruby
+    ruff
     rust-analyzer
     rustup
     satty

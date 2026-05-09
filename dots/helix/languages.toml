@@ -9,15 +9,15 @@ auto-format = true
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]
-name = "cpp"
-auto-format = true
-indent = { tab-width = 4, unit = "    " }
-
-[[language]]
 name = "c-sharp"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
 language-servers = ["omnisharp"]
+
+[[language]]
+name = "cpp"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "dockerfile"
@@ -45,6 +45,11 @@ auto-format = true
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]
+name = "jsx"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
 name = "lua"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
@@ -55,9 +60,16 @@ auto-format = true
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]
+name = "meson"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["mesonlsp"]
+
+[[language]]
 name = "nix"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+language-servers = ["nixd"]
 
 [[language]]
 name = "php"
@@ -69,6 +81,7 @@ language-servers = ["phpactor"]
 name = "python"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+language-servers = ["pylsp"]
 
 [[language]]
 name = "qml"
@@ -80,9 +93,21 @@ language-servers = ["qmlls"]
 name = "rust"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+language-servers = ["rust-analyzer"]
 
 [[language]]
 name = "toml"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["taplo"]
+
+[[language]]
+name = "tsx"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "typescript"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
 
@@ -101,13 +126,20 @@ name = "zig"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
 
+[language-server.mesonlsp]
+command = "mesonlsp"
+
+[language-server.nixd]
+command = "nixd"
+
 [language-server.omnisharp]
 command = "OmniSharp"
-args = ["--languageserver"]
 
 [language-server.phpactor]
 command = "phpactor"
-args = ["language-server"]
+
+[language-server.pylsp]
+command = "pylsp"
 
 [language-server.qmlls]
 command = "qmlls"
@@ -115,10 +147,5 @@ command = "qmlls"
 [language-server.rust-analyzer]
 command = "rust-analyzer"
 
-[language-server.rust-analyzer.config]
-inlayHints.bindingModeHints.enable = false
-inlayHints.closingBraceHints.minLines = 10
-inlayHints.closureReturnTypeHints.enable = "with_block"
-inlayHints.discriminantHints.enable = "fieldless"
-inlayHints.lifetimeElisionHints.enable = "skip_trivial"
-inlayHints.typeHints.hideClosureInitialization = false
+[language-server.taplo]
+command = "taplo"
