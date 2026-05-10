@@ -7,7 +7,6 @@ in
   home.file = {
     ".bashrc".source = mkOutOfStoreSymlink "${configDir}/shell/.bashrc";
     ".config/btop".source = mkOutOfStoreSymlink "${configDir}/btop";
-    ".config/cava".source = mkOutOfStoreSymlink "${configDir}/cava";
     ".config/dunst".source = mkOutOfStoreSymlink "${configDir}/dunst";
     ".config/foot".source = mkOutOfStoreSymlink "${configDir}/foot";
     ".config/fuzzel".source = mkOutOfStoreSymlink "${configDir}/fuzzel";

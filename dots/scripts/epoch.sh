@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-MAUVE='\033[38;2;203;166;247m'
+PINK='\033[38;2;244;184;228m'
 RESET='\033[0m'
 
 install_time=$(date -d "2025-09-20 23:47:23" +%s)
@@ -23,19 +23,17 @@ years=$((total_months / 12))
 
 p() {
     if [[ $1 -eq 1 ]]; then
-        printf "${MAUVE}%s${RESET} %s" "$1" "$2"
+        printf "${PINK}%s${RESET} %s" "$1" "$2"
     else
-        printf "${MAUVE}%s${RESET} %ss" "$1" "$2"
+        printf "${PINK}%s${RESET} %ss" "$1" "$2"
     fi
 }
 
-echo -e "initial linux install time: ${MAUVE}${install_datetime}${RESET}"
-echo -e "current time: ${MAUVE}${current_datetime}${RESET}"
-
+echo -e "initial linux install time: ${PINK}${install_datetime}${RESET}"
+echo -e "current time: ${PINK}${current_datetime}${RESET}"
 echo
 echo "time elapsed since then:"
 echo
-
 printf "in seconds: %s\n" "$(p "$age_seconds" second)"
 printf "in minutes: %s, %s\n" "$(p "$total_minutes" minute)" "$(p "$seconds" second)"
 printf "in hours: %s, %s, %s\n" "$(p "$total_hours" hour)" "$(p "$minutes" minute)" "$(p "$seconds" second)"

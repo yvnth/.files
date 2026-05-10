@@ -8,14 +8,14 @@ set $lock swaylock \
     --indicator-thickness 15 \
     --indicator-radius 150 \
     --image ~/Pictures/walls/bsod.png \
-    --ring-color cba6f7 \
-    --key-hl-color a6e3a1 \
+    --ring-color f4b8e4 \
+    --key-hl-color a6d189 \
     --line-color 00000000 \
-    --inside-color 1e1e2e88 \
-    --inside-clear-color 1e1e2e88 \
-    --text-color cdd6f4 \
-    --text-clear-color cdd6f4 \
-    --ring-clear-color cba6f7 \
+    --inside-color 30344688 \
+    --inside-clear-color 30344688 \
+    --text-color c6d0f5 \
+    --text-clear-color c6d0f5 \
+    --ring-clear-color f4b8e4 \
     --separator-color 00000000 \
     --font "JetBrainsMono Nerd Font"
 
@@ -33,16 +33,16 @@ default_border pixel 3
 
 focus_follows_mouse yes
 
-set $base #1e1e2e
-set $mauve #cba6f7
-set $rosewater #f5e0dc
-set $text #cdd6f4
-set $overlay0 #6c7086
+set $base #303446
+set $pink #f4b8e4
+set $rosewater #f2d5cf
+set $text #c6d0f5
+set $overlay0 #737994
 
-client.focused          $base      $mauve    $base      $rosewater  $mauve
-client.focused_inactive $overlay0  $base     $text      $rosewater  $overlay0
-client.unfocused        $overlay0  $base     $text      $rosewater  $overlay0
-client.urgent           #f38ba8    $base     #f38ba8    $base       #f38ba8
+client.focused          $base      $pink      $base      $rosewater  $pink
+client.focused_inactive $overlay0  $base      $text      $rosewater  $overlay0
+client.unfocused        $overlay0  $base      $text      $rosewater  $overlay0
+client.urgent           #e78284    $base      #e78284    $base       #e78284
 client.background       $base
 
 floating_modifier $mod

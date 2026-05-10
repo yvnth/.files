@@ -10,9 +10,8 @@ in
 {
   programs.spicetify = {
     enable = true;
-
     theme = lib.mkForce spicePkgs.themes.catppuccin;
-    colorScheme = lib.mkForce "mocha";
+    colorScheme = lib.mkForce "frappe";
 
     enabledCustomApps = [
       spicePkgs.apps.marketplace

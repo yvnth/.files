@@ -3,45 +3,34 @@ set pages-per-row 1
 set scroll-page-aware "true"
 set scroll-full-overlap 0.01
 set scroll-step 50
-
 set zoom-min 10
 set guioptions ""
-
 set font "JetBrainsMono Nerd Font 15"
 
-set default-bg "#1e1e2e"
-set default-fg "#cdd6f4"
-
-set statusbar-fg "#cdd6f4"
-set statusbar-bg "#181825"
-
-set inputbar-bg "#181825"
-set inputbar-fg "#cdd6f4"
-
-set notification-error-bg "#f38ba8"
-set notification-error-fg "#1e1e2e"
-
-set notification-warning-bg "#fab387"
-set notification-warning-fg "#1e1e2e"
-
-set notification-bg "#a6e3a1"
-set notification-fg "#1e1e2e"
-
-set highlight-color "#f9e2af"
-set highlight-active-color "#cba6f7"
-
-set completion-highlight-fg "#1e1e2e"
-set completion-highlight-bg "#cba6f7"
-
-set completion-bg "#313244"
-set completion-fg "#cdd6f4"
+set default-bg "#303446"
+set default-fg "#c6d0f5"
+set statusbar-fg "#c6d0f5"
+set statusbar-bg "#292c3c"
+set inputbar-bg "#292c3c"
+set inputbar-fg "#c6d0f5"
+set notification-error-bg "#e78284"
+set notification-error-fg "#303446"
+set notification-warning-bg "#ef9f76"
+set notification-warning-fg "#303446"
+set notification-bg "#a6d189"
+set notification-fg "#303446"
+set highlight-color "#e5c890"
+set highlight-active-color "#f4b8e4"
+set completion-highlight-fg "#303446"
+set completion-highlight-bg "#f4b8e4"
+set completion-bg "#414559"
+set completion-fg "#c6d0f5"
 
 set recolor "true"
-set recolor-lightcolor "#1e1e2e"
-set recolor-darkcolor "#cdd6f4"
+set recolor-lightcolor "#303446"
+set recolor-darkcolor "#c6d0f5"
 set recolor-reverse-video "true"
 set recolor-keephue "true"
-
 set render-loading "false"
 set selection-clipboard "clipboard"
 
