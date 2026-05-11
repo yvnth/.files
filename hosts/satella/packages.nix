@@ -47,7 +47,6 @@
     firefox
     foot
     fortune
-    fuzzel
     fzf
     gcc
     gimp
@@ -111,6 +110,7 @@
     python314
     python314Packages.uv
     ripgrep
+    rofi
     rofimoji
     ruby
     ruff

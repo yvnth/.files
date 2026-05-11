@@ -1,0 +1,102 @@
+* {
+    background-color:            #303446;
+    border-color:                #f4b8e4;
+    text-color:                  #c6d0f5;
+    font:                        "JetBrainsMono Nerd Font 13";
+    prompt-font:                 "JetBrainsMono Nerd Font Bold 13";
+    prompt-background:           #f4b8e4;
+    prompt-foreground:           #303446;
+    prompt-padding:              4px;
+    alternate-normal-background: #292c3c;
+    alternate-normal-foreground: @text-color;
+    selected-normal-background:  #f4b8e4;
+    selected-normal-foreground:  #303446;
+    spacing:                     3;
+}
+
+configuration {
+    drun-icon-theme: "Papirus";
+}
+
+#window {
+    border:  2;
+    padding: 5;
+}
+
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+
+#message {
+    border:   1px dash 0px 0px;
+    padding:  1px;
+}
+
+#listview {
+    fixed-height: 0;
+    border:       2px solid 0px 0px;
+    border-color: #292c3c;
+    spacing:      2px;
+    scrollbar:    true;
+    padding:      2px 0px 0px;
+}
+
+#element {
+    border:  0;
+    padding: 3px;
+}
+
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+#scrollbar {
+    width:        0px;
+    border:       0;
+    handle-width: 0px;
+    padding:      0;
+}
+
+#sidebar {
+    border: 2px dash 0px 0px;
+}
+
+#button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+#inputbar {
+    spacing: 0;
+    padding: 1px;
+}
+
+#case-indicator {
+    spacing: 0;
+}
+
+#entry {
+    padding: 4px 4px;
+    expand:  false;
+    width:   10em;
+}
+
+#prompt {
+    padding:          @prompt-padding;
+    background-color: @prompt-background;
+    text-color:       @prompt-foreground;
+    font:             @prompt-font;
+    border-radius:    2px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}

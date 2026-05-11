@@ -2,7 +2,7 @@ set $mod Mod4
 set $term foot
 set $browser firefox
 set $fm nemo
-set $menu fuzzel
+set $menu rofi
 set $lock swaylock \
     --ignore-empty-password \
     --indicator-thickness 15 \
@@ -76,8 +76,8 @@ input type:touchpad {
 }
 
 bindsym $mod+Return exec $term
-bindsym $mod+space exec $menu
-bindsym $mod+Ctrl+space exec rofimoji --selector fuzzel
+bindsym $mod+space exec $menu -show drun
+bindsym $mod+Ctrl+space exec rofimoji --selector $menu
 bindsym $mod+n exec $fm
 bindsym $mod+b exec $browser
 bindsym $mod+Shift+Escape exec $lock

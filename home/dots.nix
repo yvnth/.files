@@ -9,10 +9,10 @@ in
     ".config/btop".source = mkOutOfStoreSymlink "${configDir}/btop";
     ".config/dunst".source = mkOutOfStoreSymlink "${configDir}/dunst";
     ".config/foot".source = mkOutOfStoreSymlink "${configDir}/foot";
-    ".config/fuzzel".source = mkOutOfStoreSymlink "${configDir}/fuzzel";
     ".config/helix".source = mkOutOfStoreSymlink "${configDir}/helix";
     ".config/lazydocker".source = mkOutOfStoreSymlink "${configDir}/lazydocker";
     ".config/lazygit".source = mkOutOfStoreSymlink "${configDir}/lazygit";
+    ".config/rofi".source = mkOutOfStoreSymlink "${configDir}/rofi";
     ".config/scripts".source = mkOutOfStoreSymlink "${configDir}/scripts";
     ".config/shell".source = mkOutOfStoreSymlink "${configDir}/shell";
     ".config/sway".source = mkOutOfStoreSymlink "${configDir}/sway";
