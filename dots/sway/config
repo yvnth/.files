@@ -1,7 +1,6 @@
 set $mod Mod4
 set $term foot
 set $browser firefox
-set $fm nemo
 set $menu rofi
 set $lock swaylock \
     --ignore-empty-password \
@@ -78,11 +77,10 @@ input type:touchpad {
 bindsym $mod+Return exec $term
 bindsym $mod+space exec $menu -show drun
 bindsym $mod+Ctrl+space exec rofimoji --selector $menu
-bindsym $mod+n exec $fm
 bindsym $mod+b exec $browser
 bindsym $mod+Shift+Escape exec $lock
 
-bindsym Print exec sh -c 'grim -t ppm -g "$(slurp)" - | satty --filename - --fullscreen --copy-command wl-copy --output-filename ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png'
+bindsym Print exec sh -c 'grim -t ppm -g "$(slurp)" - | satty --filename - --fullscreen --copy-command wl-copy --output-filename ~/Pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png'
 bindsym Shift+Print exec sh -c 'if pgrep -x wl-screenrec > /dev/null; then pkill -SIGINT wl-screenrec && notify-send -u normal -t 4000 "🎬 Recording Saved" "✅ Video written to ~/Videos — ready to use!"; else FILE=~/Videos/$(date +%Y-%m-%d_%H-%M-%S).mp4; REGION=$(slurp) && wl-screenrec --geometry "$REGION" -f "$FILE" & notify-send -u critical -t 3000 "🔴 Recording in Progress" "🎯 Region locked — press Shift+Print again to stop"; fi'
 
 bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+
