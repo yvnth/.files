@@ -1,9 +1,23 @@
 @define-color pink #f4b8e4;
+@define-color mauve #ca9ee6;
+@define-color lavender #babbf1;
+@define-color blue #8caaee;
+@define-color sapphire #85c1dc;
+@define-color sky #99d1db;
+@define-color teal #81c8be;
+@define-color green #a6d189;
+@define-color yellow #e5c890;
+@define-color peach #ef9f76;
+@define-color flamingo #eebebe;
+@define-color red #e78284;
+@define-color rosewater #f2d5cf;
 @define-color text #c6d0f5;
 @define-color subtext #a5adce;
 @define-color bg #303446;
-@define-color active #f4b8e4;
+@define-color surface0 #414559;
+@define-color surface1 #51576d;
 @define-color crust #232634;
+@define-color mantle #292c3c;
 
 * {
   font-family: "JetBrainsMono Nerd Font Propo";
@@ -35,14 +49,28 @@ window#waybar {
   padding: 4px 10px;
   margin: 0;
   border-radius: 0;
+  transition: color 0.2s, background 0.2s;
+}
+
+#workspaces button.empty {
+  color: alpha(@subtext, 0.45);
+}
+
+#workspaces button.visible,
+#workspaces button.occupied {
+  color: @pink;
+  background: alpha(@pink, 0.10);
 }
 
 #workspaces button.active {
-  color: @active;
+  color: @pink;
+  background: alpha(@pink, 0.18);
+  box-shadow: inset 0 -2px 0 @pink;
 }
 
 #workspaces button:hover {
-  background: #414559;
+  background: @surface0;
+  color: @pink;
 }
 
 #network,
@@ -52,9 +80,103 @@ window#waybar {
 #pulseaudio,
 #backlight,
 #clock,
-#tray {
+#tray,
+#temperature,
+#disk,
+#custom-launcher,
+#custom-power {
   background: @bg;
   border-radius: 0;
   padding: 4px 10px;
   margin: 0;
+  transition: color 0.2s;
+}
+
+#custom-launcher {
+  color: @pink;
+}
+
+#network {
+  color: @sapphire;
+}
+
+#network.disconnected {
+  color: alpha(@subtext, 0.5);
+}
+
+#cpu {
+  color: @peach;
+}
+
+#memory {
+  color: @mauve;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#pulseaudio {
+  color: @teal;
+}
+
+#pulseaudio.muted {
+  color: @subtext;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @sky;
+}
+
+#battery.warning:not(.charging) {
+  color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  animation: blink 0.5s steps(12) infinite;
+}
+
+#clock {
+  color: @lavender;
+}
+
+#temperature {
+  color: @flamingo;
+}
+
+#temperature.critical {
+  color: @red;
+  animation: blink 0.5s steps(12) infinite;
+}
+
+#disk {
+  color: @blue;
+}
+
+#tray {
+  color: @rosewater;
+}
+
+#custom-power {
+  color: @red;
+}
+
+#tray>.passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+  -gtk-icon-effect: highlight;
+  color: @peach;
+}
+
+@keyframes blink {
+  to {
+    color: @subtext;
+  }
 }
