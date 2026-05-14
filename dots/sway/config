@@ -49,7 +49,7 @@ floating_modifier $mod
 exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec_always swaybg -i ~/Pictures/walls/nixppuccin.jpg -m fill
 exec_always autotiling
-exec waybar
+exec_always sh -c 'pkill waybar; sleep 0.2; waybar'
 exec ~/.config/sway/battery-warning.sh
 exec_always swayidle -w \
     timeout 300 'swaylock --ignore-empty-password --indicator-thickness 15 --indicator-radius 150 --image ~/Pictures/walls/bsod.png --ring-color f4b8e4 --key-hl-color a6d189 --line-color 00000000 --inside-color 30344688 --inside-clear-color 30344688 --text-color c6d0f5 --text-clear-color c6d0f5 --ring-clear-color f4b8e4 --separator-color 00000000 --font "JetBrainsMono Nerd Font"' \
