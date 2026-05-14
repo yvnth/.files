@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 CRIT_LOW_ID=9999
 CRIT_FULL_ID=9998
 
@@ -11,27 +12,31 @@ while true; do
 
     if [ "$status" = "Discharging" ]; then
         if [ "$notified_full" = true ]; then
-            dunstify -r $CRIT_FULL_ID -t 1 ""
+            notify-send -r $CRIT_FULL_ID -t 1 ""
             notified_full=false
         fi
 
         if [ "$battery" -le 5 ] && [ "$notified_low" = false ]; then
-            dunstify -u critical -r $CRIT_LOW_ID \
-            "󰂃 Critical Battery — ${battery}%" \
-            "Charge immediately to prevent shutdown."
+            notify-send \
+                -u critical \
+                -r $CRIT_LOW_ID \
+                "󰂃 Critical Battery — ${battery}%" \
+                "Charge immediately to prevent shutdown."
             notified_low=true
         fi
 
     else
         if [ "$notified_low" = true ]; then
-            dunstify -r $CRIT_LOW_ID -t 1 ""
+            notify-send -r $CRIT_LOW_ID -t 1 ""
             notified_low=false
         fi
 
         if [ "$battery" -ge 100 ] && [ "$notified_full" = false ]; then
-            dunstify -u critical -r $CRIT_FULL_ID \
-            "󰁹 Battery Full — ${battery}%" \
-            "Unplug to preserve battery health."
+            notify-send \
+                -u critical \
+                -r $CRIT_FULL_ID \
+                "󰁹 Battery Full — ${battery}%" \
+                "Unplug to preserve battery health."
             notified_full=true
         fi
     fi
