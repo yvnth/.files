@@ -111,6 +111,9 @@ bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+t layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
+bindsym $mod+s scratchpad show
+bindsym $mod+Ctrl+s move scratchpad
+
 bindsym Mod1+Shift+h resize shrink width 20 px
 bindsym Mod1+Shift+j resize grow height 20 px
 bindsym Mod1+Shift+k resize shrink height 20 px
