@@ -16,8 +16,6 @@
   environment.systemPackages = with pkgs; [
     acpi
     age
-    asciiquarium
-    astroterm
     autotiling
     banana-cursor
     bash-language-server
@@ -27,27 +25,20 @@
     btop
     calibre
     cargo-seek
-    cava
     cbonsai
     clang-tools
     cliphist
-    cmatrix
-    cointop
-    cowsay
     direnv
     docker-buildx
     docker-compose
     dockerfile-language-server
     dotnet-sdk
     dunst
-    dysk
     eza
     fastfetch
     fd
-    figlet
     firefox
     foot
-    fortune
     fzf
     gcc
     gimp
@@ -88,7 +79,6 @@
     mpv
     ncdu
     nemo
-    nerdfetch
     nixd
     nixfmt
     nitch
@@ -97,15 +87,12 @@
     nwg-look
     obsidian
     omnisharp-roslyn
-    onefetch
     papirus-icon-theme
     pass
     pastel
     pavucontrol
-    pfetch-rs
     php
     phpactor
-    pipes
     postman
     python3Packages.python-lsp-server
     python314
@@ -118,7 +105,6 @@
     rust-analyzer
     rustup
     satty
-    sl
     slurp
     sops
     swaybg
@@ -127,12 +113,10 @@
     taplo
     tealdeer
     tmux
-    tty-clock
     typescript
     typescript-language-server
     typst
     unzip
-    uwufetch
     vscode
     vscode-langservers-extracted
     waybar
