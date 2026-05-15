@@ -2,21 +2,6 @@ set $mod Mod4
 set $term foot
 set $browser firefox
 set $menu rofi
-set $lock swaylock \
-    --ignore-empty-password \
-    --indicator-thickness 15 \
-    --indicator-radius 150 \
-    --image ~/Pictures/walls/bsod.png \
-    --ring-color f4b8e4 \
-    --key-hl-color a6d189 \
-    --line-color 00000000 \
-    --inside-color 30344688 \
-    --inside-clear-color 30344688 \
-    --text-color c6d0f5 \
-    --text-clear-color c6d0f5 \
-    --ring-clear-color f4b8e4 \
-    --separator-color 00000000 \
-    --font "JetBrainsMono Nerd Font"
 
 font pango:JetBrainsMono Nerd Font Bold 15
 
@@ -46,18 +31,18 @@ client.background       $base
 
 floating_modifier $mod
 
-exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec_always autotiling
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec autotiling
 exec_always sh -c 'pkill waybar; sleep 0.2; waybar'
 exec ~/.config/sway/battery-warning.sh
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
-exec_always swayidle -w \
-    timeout 300 '$lock' \
-    timeout 600 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' \
-    before-sleep '$lock'
+exec sh -c 'pkill swayidle; swayidle -w \
+ timeout 300 "swaylock -f" \
+ timeout 600 "swaymsg \"output * dpms off\"" \
+ resume "swaymsg \"output * dpms on\"" \
+ before-sleep "swaylock -f"'
 
 input * {
     xkb_layout us
@@ -81,7 +66,7 @@ bindsym $mod+Ctrl+space exec cliphist list | $menu -dmenu -display-columns 2 | c
 bindsym $mod+Mod1+space exec rofimoji --selector "$menu" --action copy
 bindsym $mod+b exec $browser
 bindsym $mod+w exec waytrogen
-bindsym $mod+Shift+Escape exec $lock
+bindsym $mod+Shift+Escape exec swaylock -f
 
 bindsym Print exec sh -c 'grim -t ppm -g "$(slurp)" - | satty --filename - --fullscreen --copy-command wl-copy --output-filename ~/Pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png'
 bindsym Shift+Print exec sh -c 'if pgrep -x wl-screenrec > /dev/null; then pkill -SIGINT wl-screenrec && notify-send -u normal -t 4000 "🎬 Recording Saved" "✅ Video written to ~/Videos — ready to use!"; else FILE=~/Videos/$(date +%Y-%m-%d_%H-%M-%S).mp4; REGION=$(slurp) && wl-screenrec --geometry "$REGION" -f "$FILE" & notify-send -u critical -t 3000 "🔴 Recording in Progress" "🎯 Region locked — press Shift+Print again to stop"; fi'
