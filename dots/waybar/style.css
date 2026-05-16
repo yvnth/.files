@@ -141,6 +141,14 @@ window#waybar {
   animation: blink 0.5s steps(12) infinite;
 }
 
+#battery.good {
+  color: @green;
+}
+
+#battery.full {
+  color: @green;
+}
+
 #clock {
   color: @lavender;
 }
