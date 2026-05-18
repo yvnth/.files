@@ -1,9 +1,10 @@
 configuration {
-    modi:          "window,drun,ssh,combi";
-    font:          "JetBrainsMono Nerd Font 10";
-    combi-modi:    "window,drun,ssh";
-    show-icons:    true;
-    icon-theme:    "Papirus";
+    modi: "window,drun,ssh,combi";
+    font: "JetBrainsMono Nerd Font 10";
+    combi-modi: "window,drun,ssh";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: " run";
 }
 
 @theme "~/.config/rofi/style.rasi"
