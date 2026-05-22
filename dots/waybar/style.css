@@ -1,26 +1,9 @@
 @define-color pink #f4b8e4;
-@define-color mauve #ca9ee6;
-@define-color lavender #babbf1;
-@define-color blue #8caaee;
-@define-color sapphire #85c1dc;
-@define-color sky #99d1db;
-@define-color teal #81c8be;
-@define-color green #a6d189;
-@define-color yellow #e5c890;
-@define-color peach #ef9f76;
-@define-color flamingo #eebebe;
-@define-color red #e78284;
-@define-color rosewater #f2d5cf;
 @define-color text #c6d0f5;
-@define-color subtext #a5adce;
 @define-color bg #303446;
-@define-color surface0 #414559;
-@define-color surface1 #51576d;
-@define-color crust #232634;
-@define-color mantle #292c3c;
 
 * {
-  font-family: "JetBrainsMono Nerd Font Propo";
+  font-family: "MartianMono Nerd Font Propo";
   font-size: 15px;
   font-weight: 600;
   border: none;
@@ -36,7 +19,6 @@ window#waybar {
 }
 
 .modules-left,
-.modules-center,
 .modules-right {
   background: @bg;
   padding: 0;
@@ -76,12 +58,6 @@ window#waybar {
 #workspaces button:hover {
   background: alpha(@pink, 0.18);
   color: @pink;
-}
-
-#window {
-  color: @pink;
-  padding: 2px 8px;
-  margin: 0;
 }
 
 #network,

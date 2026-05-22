@@ -3,7 +3,7 @@ set $term foot
 set $browser firefox
 set $menu rofi
 
-font pango:JetBrainsMono Nerd Font Bold 15
+font pango:MartianMono Nerd Font Bold 15
 
 seat seat0 xcursor_theme Banana 40
 exec_always export XCURSOR_SIZE=40

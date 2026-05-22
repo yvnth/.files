@@ -5,8 +5,7 @@ set scroll-full-overlap 0.01
 set scroll-step 50
 set zoom-min 10
 set guioptions ""
-set font "JetBrainsMono Nerd Font 15"
-
+set font "MartianMono Nerd Font 15"
 set default-bg "#303446"
 set default-fg "#c6d0f5"
 set statusbar-fg "#c6d0f5"
@@ -25,7 +24,6 @@ set completion-highlight-fg "#303446"
 set completion-highlight-bg "#f4b8e4"
 set completion-bg "#414559"
 set completion-fg "#c6d0f5"
-
 set recolor "true"
 set recolor-lightcolor "#303446"
 set recolor-darkcolor "#c6d0f5"

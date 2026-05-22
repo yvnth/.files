@@ -2,6 +2,7 @@
 {
   stylix = {
     enable = true;
+
     base16Scheme = {
       base00 = "303446";
       base01 = "292c3c";
@@ -20,20 +21,25 @@
       base0E = "ca9ee6";
       base0F = "eebebe";
     };
+
     polarity = "dark";
+
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerd-fonts.martian-mono;
+        name = "MartianMono Nerd Font";
       };
+
       sansSerif = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerd-fonts.martian-mono;
+        name = "MartianMono Nerd Font";
       };
+
       serif = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerd-fonts.martian-mono;
+        name = "MartianMono Nerd Font";
       };
+
       sizes = {
         applications = 15;
         terminal = 15;

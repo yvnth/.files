@@ -7,7 +7,6 @@ origin = top-right
 offset = (20, 60)
 scale = 0
 notification_limit = 20
-
 progress_bar = true
 progress_bar_height = 8
 progress_bar_frame_width = 0
@@ -15,10 +14,8 @@ progress_bar_min_width = 150
 progress_bar_max_width = 320
 progress_bar_corner_radius = 0
 progress_bar_corners = none
-
 icon_corner_radius = 0
 icon_corners = none
-
 indicate_hidden = yes
 transparency = 0
 separator_height = 0
@@ -30,8 +27,7 @@ frame_color = "#8839ef"
 gap_size = 10
 separator_color = frame
 sort = yes
-
-font = JetBrainsMono Nerd Font Propo 11
+font = MartianMono Nerd Font Propo 11
 line_height = 0
 markup = full
 format = "<b>%s</b>\n%b"
@@ -40,43 +36,34 @@ vertical_alignment = center
 show_age_threshold = 60
 ellipsize = middle
 ignore_newline = no
-
 stack_duplicates = true
 hide_duplicate_count = false
 show_indicators = yes
-
 enable_posix_regex = false
 enable_recursive_icon_lookup = true
 icon_theme = Adwaita
 icon_position = left
 min_icon_size = 32
 max_icon_size = 96
-
 sticky_history = yes
 history_length = 25
-
 dmenu = /usr/bin/dmenu -p dunst:
 browser = /usr/bin/xdg-open
 always_run_script = true
 title = Dunst
 class = Dunst
-
 corner_radius = 0
 corners = none
-
 ignore_dbusclose = false
 force_xwayland = false
 force_xinerama = false
-
 mouse_left_click = close_current
 mouse_middle_click = do_action, close_current
 mouse_right_click = close_all
 
-
 [experimental]
 per_monitor_dpi = false
 pause_on_mouse_over = false
-
 
 [urgency_low]
 background = "#eff1f5"
@@ -85,7 +72,6 @@ frame_color = "#9ca0b0"
 timeout = 5
 default_icon = dialog-information
 
-
 [urgency_normal]
 background = "#eff1f5"
 foreground = "#4c4f69"
@@ -93,7 +79,6 @@ frame_color = "#8839ef"
 timeout = 8
 override_pause_level = 30
 default_icon = dialog-information
-
 
 [urgency_critical]
 background = "#eff1f5"
