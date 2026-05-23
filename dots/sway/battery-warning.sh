@@ -3,6 +3,8 @@
 CRIT_LOW_ID=9999
 CRIT_FULL_ID=9998
 
+ICON_DIR="$HOME/.config/sway"
+
 notified_low=false
 notified_full=false
 
@@ -20,8 +22,10 @@ while true; do
             notify-send \
                 -u critical \
                 -r $CRIT_LOW_ID \
-                "󰂃 Critical Battery — ${battery}%" \
+                -i "$ICON_DIR/battery-empty.svg" \
+                "Critical Battery — ${battery}%" \
                 "Charge immediately to prevent shutdown."
+
             notified_low=true
         fi
 
@@ -35,8 +39,10 @@ while true; do
             notify-send \
                 -u critical \
                 -r $CRIT_FULL_ID \
-                "󰁹 Battery Full — ${battery}%" \
+                -i "$ICON_DIR/battery-full.svg" \
+                "Battery Full — ${battery}%" \
                 "Unplug to preserve battery health."
+
             notified_full=true
         fi
     fi

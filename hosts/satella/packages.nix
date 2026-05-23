@@ -33,7 +33,6 @@
     docker-compose
     dockerfile-language-server
     dotnet-sdk
-    dunst
     eza
     fastfetch
     fd
@@ -96,6 +95,7 @@
     postman
     python3Packages.python-lsp-server
     python314
+    python314Packages.pip
     python314Packages.uv
     ripgrep
     rofi
@@ -110,6 +110,7 @@
     swaybg
     swayidle
     swaylock
+    swaynotificationcenter
     taplo
     tealdeer
     tmux

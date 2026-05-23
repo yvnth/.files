@@ -69,7 +69,8 @@ window#waybar {
 #tray,
 #disk,
 #custom-launcher,
-#custom-power {
+#custom-power,
+#custom-notifications {
   background: @bg;
   color: @pink;
   border-radius: 0;

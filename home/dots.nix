@@ -7,7 +7,6 @@ in
   home.file = {
     ".bashrc".source = mkOutOfStoreSymlink "${configDir}/shell/.bashrc";
     ".config/btop".source = mkOutOfStoreSymlink "${configDir}/btop";
-    ".config/dunst".source = mkOutOfStoreSymlink "${configDir}/dunst";
     ".config/foot".source = mkOutOfStoreSymlink "${configDir}/foot";
     ".config/helix".source = mkOutOfStoreSymlink "${configDir}/helix";
     ".config/lazydocker".source = mkOutOfStoreSymlink "${configDir}/lazydocker";
@@ -17,6 +16,7 @@ in
     ".config/shell".source = mkOutOfStoreSymlink "${configDir}/shell";
     ".config/sway".source = mkOutOfStoreSymlink "${configDir}/sway";
     ".config/swaylock".source = mkOutOfStoreSymlink "${configDir}/swaylock";
+    ".config/swaync".source = mkOutOfStoreSymlink "${configDir}/swaync";
     ".config/tmux".source = mkOutOfStoreSymlink "${configDir}/tmux";
     ".config/waybar".source = mkOutOfStoreSymlink "${configDir}/waybar";
     ".config/yazi".source = mkOutOfStoreSymlink "${configDir}/yazi";

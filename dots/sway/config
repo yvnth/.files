@@ -34,6 +34,7 @@ floating_modifier $mod
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 exec autotiling
 exec_always sh -c 'pkill waybar; sleep 0.2; waybar'
+exec swaync
 exec ~/.config/sway/battery-warning.sh
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
