@@ -1,13 +1,13 @@
 hl.monitor({
-    output   = "eDP-1",
-    mode     = "1920x1080@144",
+    output = "eDP-1",
+    mode = "1920x1080@144",
     position = "0x0",
-    scale    = 1,
+    scale = 1,
 })
 
 local terminal = "kitty"
-local menu     = "fuzzel"
-local browser  = "firefox"
+local menu = "fuzzel"
+local browser = "firefox"
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 32")
@@ -25,71 +25,68 @@ hl.env("HYPRCURSOR_SIZE", "32")
 
 hl.config({
     input = {
-        kb_layout          = "us",
-        kb_variant         = "",
-        kb_model           = "",
-        kb_options         = "",
-        kb_rules           = "",
+        kb_layout = "us",
+        kb_variant = "",
+        kb_model = "",
+        kb_options = "",
+        kb_rules = "",
 
-        repeat_delay       = 300,
-        repeat_rate        = 50,
+        repeat_delay = 300,
+        repeat_rate = 50,
 
         numlock_by_default = true,
 
-        follow_mouse       = 1,
-        sensitivity        = 0,
+        follow_mouse = 1,
+        sensitivity = 0,
 
-        touchpad           = {
+        touchpad = {
             natural_scroll = true,
         },
     },
 })
 
 hl.gesture({
-    fingers   = 3,
+    fingers = 3,
     direction = "horizontal",
-    action    = "workspace",
+    action = "workspace",
 })
 
 hl.device({
-    name        = "epic-mouse-v1",
+    name = "epic-mouse-v1",
     sensitivity = -0.5,
 })
 
 hl.config({
     general = {
-        gaps_in           = 3,
-        gaps_out          = 3,
-        gaps_workspaces   = 1,
+        gaps_in = 3,
+        gaps_out = 3,
+        gaps_workspaces = 1,
 
-        border_size       = 3,
-        resize_on_border  = true,
+        border_size = 3,
+        resize_on_border = true,
         no_focus_fallback = true,
-        allow_tearing     = false,
+        allow_tearing = false,
 
-        col               = {
-            active_border   = "rgba(f4b8e4ee)",
+        col = {
+            active_border = "rgba(f4b8e4ee)",
             inactive_border = "rgba(737994aa)",
         },
 
-        layout            = "dwindle",
+        layout = "dwindle",
     },
 
     decoration = {
-        rounding           = 13,
+        rounding = 13,
 
-        active_opacity     = 1.00,
-        inactive_opacity   = 0.95,
+        active_opacity = 1.00,
+        inactive_opacity = 0.95,
         fullscreen_opacity = 1.0,
 
-        dim_inactive       = true,
-        dim_strength       = 0.055,
-
-        shadow             = {
+        shadow = {
             enabled = false,
         },
 
-        blur               = {
+        blur = {
             enabled = false,
         },
     },
@@ -107,32 +104,21 @@ hl.config({
     },
 
     misc = {
-        disable_hyprland_logo        = true,
-        disable_splash_rendering     = true,
-        force_default_wallpaper      = -1,
+        disable_hyprland_logo = true,
+        disable_splash_rendering = true,
+        force_default_wallpaper = -1,
 
-        vrr                          = 1,
+        vrr = 1,
 
-        background_color             = "rgba(8,8,12,240)",
+        background_color = "rgba(8,8,12,240)",
 
-        focus_on_activate            = true,
-        animate_manual_resizes       = false,
+        focus_on_activate = true,
+        animate_manual_resizes = false,
         animate_mouse_windowdragging = false,
 
-        layers_hog_keyboard_focus    = true,
+        layers_hog_keyboard_focus = true,
     },
 })
-
-hl.curve("snap", { type = "bezier", points = { { 0.25, 0.9 }, { 0.1, 1.0 } } })
-
-hl.animation({ leaf = "windows", enabled = true, speed = 1.2, bezier = "snap" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 1.2, bezier = "snap", style = "popin 80%" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.0, bezier = "snap", style = "popin 80%" })
-hl.animation({ leaf = "windowsMove", enabled = true, speed = 1.2, bezier = "snap" })
-hl.animation({ leaf = "fade", enabled = true, speed = 1.5, bezier = "snap" })
-hl.animation({ leaf = "border", enabled = true, speed = 1.5, bezier = "snap" })
-hl.animation({ leaf = "workspaces", enabled = false })
-hl.animation({ leaf = "specialWorkspace", enabled = false })
 
 local mainMod = "SUPER"
 
@@ -202,20 +188,20 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 hl.window_rule({
-    name           = "suppress-maximize-events",
-    match          = { class = ".*" },
+    name = "suppress-maximize-events",
+    match = { class = ".*" },
     suppress_event = "maximize",
 })
 
 hl.window_rule({
-    name     = "fix-xwayland-drags",
-    match    = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
+    name = "fix-xwayland-drags",
+    match = {
+        class = "^$",
+        title = "^$",
+        xwayland = true,
+        float = true,
         fullscreen = false,
-        pin        = false,
+        pin = false,
     },
     no_focus = true,
 })
