@@ -153,8 +153,8 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + CTRL + SPACE", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"))
 hl.bind(mainMod .. " + ALT + SPACE", hl.dsp.exec_cmd("rofimoji --selector fuzzel --action copy"))
 hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("noctalia-shell ipc call lockScreen lock"))
-hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("hyprctl eval 'hl.config({ general = { layout = \"scrolling\" } })'"))
-hl.bind(mainMod .. " + ALT + T", hl.dsp.exec_cmd("hyprctl eval 'hl.config({ general = { layout = \"dwindle\" } })'"))
+hl.bind(mainMod .. " + ALT + L",
+    hl.dsp.exec_cmd("~/.config/hypr/scripts/layout-change.sh"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", toggle = true }))
 
 hl.bind("PRINT",
