@@ -1,3 +1,2 @@
 alias ls='eza --icons --group-directories-first'
-alias satella='sudo nixos-rebuild switch --flake ~/nix-dots#satella'
 alias tree='eza --tree --icons'
