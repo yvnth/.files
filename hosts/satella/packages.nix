@@ -105,6 +105,7 @@
     taplo
     tealdeer
     tmux
+    tombi
     typescript
     typescript-language-server
     typst

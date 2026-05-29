@@ -99,7 +99,7 @@ language-servers = ["rust-analyzer"]
 name = "toml"
 auto-format = true
 indent = { tab-width = 2, unit = "  " }
-language-servers = ["taplo"]
+language-servers = ["taplo", "tombi"]
 
 [[language]]
 name = "tsx"
@@ -149,3 +149,7 @@ command = "rust-analyzer"
 
 [language-server.taplo]
 command = "taplo"
+
+[language-server.tombi]
+command = "tombi"
+args = ["lsp"]
