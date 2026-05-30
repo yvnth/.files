@@ -1,5 +1,5 @@
 {
-  description = "yash2k4's NixOS config";
+  description = "yvnth's NixOS config";
 
   inputs = {
     home-manager = {
@@ -68,7 +68,7 @@
               };
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.yash2k4 = {
+              users.yvnth = {
                 imports = [
                   ./hosts/satella/home.nix
                   inputs.sops-nix.homeManagerModules.sops

@@ -4,11 +4,11 @@
 }:
 {
   sops = {
-    age.keyFile = "/home/yash2k4/.config/sops/age/keys.txt";
+    age.keyFile = "/home/yvnth/.config/sops/age/keys.txt";
 
     defaultSopsFile = ../../secrets/secrets.yaml;
 
-    secrets."ssh_keys/satella/yash2k4" = {
+    secrets."ssh_keys/satella/yvnth" = {
       path = "${config.home.homeDirectory}/.ssh/id_ed25519";
     };
   };

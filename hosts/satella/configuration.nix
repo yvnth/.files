@@ -67,9 +67,9 @@
     };
   };
 
-  users.users.yash2k4 = {
+  users.users.yvnth = {
     isNormalUser = true;
-    description = "yash2k4";
+    description = "yvnth";
     shell = pkgs.zsh;
     extraGroups = [
       "wheel"

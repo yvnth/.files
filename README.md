@@ -16,10 +16,10 @@ sudo nixos-rebuild switch
 Clone the repo and replace the placeholder hardware config with the one NixOS
 generated for your machine during installation:
 ```bash
-git clone https://github.com/yash2k4/nix-dots.git ~/nix-dots
+git clone https://github.com/yvnth/nix-dots.git ~/nix-dots
 rm ~/nix-dots/hosts/satella/hardware-configuration.nix
 sudo cp /etc/nixos/hardware-configuration.nix ~/nix-dots/hosts/satella/hardware-configuration.nix
-sudo chown -R yash2k4:users ~/nix-dots
+sudo chown -R yvnth:users ~/nix-dots
 ```
 
 ### 3. Copy Age Key
