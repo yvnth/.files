@@ -30,6 +30,7 @@
     dockerfile-language-server
     dotnet-sdk
     dysk
+    element-desktop
     eza
     fastfetch
     fd
