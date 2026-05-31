@@ -3,14 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ./packages.nix
-    ../../modules/audio.nix
-    ../../modules/battery.nix
-    ../../modules/flatpak.nix
-    ../../modules/networking.nix
-    ../../modules/nvidia-intel.nix
-    ../../modules/services.nix
-    ../../modules/stylix.nix
-    ../../modules/virtualization.nix
+    ./core-default.nix
   ];
 
   boot.loader = {
