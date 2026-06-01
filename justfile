@@ -2,15 +2,15 @@ _default:
     @just --list
 
 rebuild host:
-    nixos-rebuild switch --flake .#{{host}} --sudo
+    nh os switch . -H {{host}}
 
 upgrade host:
     nix flake update
-    nixos-rebuild switch --flake .#{{host}} --sudo
+    nh os switch . -H {{host}}
 
 check:
     nix flake check
 
 clean:
-    sudo nix-collect-garbage -d
+    nh clean all
     sudo nix-store --optimize

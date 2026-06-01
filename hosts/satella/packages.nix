@@ -75,10 +75,11 @@
     mpv
     ncdu
     nemo
+    nh
     nitch
     nixd
     nixfmt
-    noctalia-shell
+    nix-output-monitor
     nodejs
     nsxiv
     nwg-look
