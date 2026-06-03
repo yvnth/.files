@@ -72,6 +72,12 @@ indent = { tab-width = 4, unit = "    " }
 language-servers = ["nixd"]
 
 [[language]]
+name = "odin"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["ols"]
+
+[[language]]
 name = "php"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
@@ -131,6 +137,9 @@ command = "mesonlsp"
 
 [language-server.nixd]
 command = "nixd"
+
+[language-server.ols]
+command = "ols"
 
 [language-server.omnisharp]
 command = "OmniSharp"

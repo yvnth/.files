@@ -64,6 +64,7 @@
     libnotify
     libqalculate
     libreoffice
+    lldb
     localsend
     lua-language-server
     man-db
@@ -77,13 +78,15 @@
     nemo
     nh
     nitch
+    nix-output-monitor
     nixd
     nixfmt
-    nix-output-monitor
     nodejs
     nsxiv
     nwg-look
     obsidian
+    odin
+    ols
     omnisharp-roslyn
     papirus-icon-theme
     pass
