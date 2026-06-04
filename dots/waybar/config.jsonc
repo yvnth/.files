@@ -9,8 +9,10 @@
     "network",
     "memory",
     "backlight",
+    "cpu",
     "pulseaudio",
     "battery",
+    "clock#date",
     "clock#time",
     "custom/notifications",
     "tray"
@@ -43,6 +45,10 @@
   "backlight": {
     "device": "intel_backlight",
     "format": "󰃠 {percent}%"
+  },
+  "cpu": {
+    "interval": 2,
+    "format": "󰾆 {usage:2}%"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -80,6 +86,11 @@
       "󰁹"
     ],
     "tooltip-format": "{capacity}%"
+  },
+  "clock#date": {
+    "interval": 60,
+    "format": "{:%d/%m/%Y}",
+    "tooltip": false
   },
   "clock#time": {
     "interval": 1,
