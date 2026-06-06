@@ -2,8 +2,8 @@
     background-color:            #303446;
     border-color:                #f4b8e4;
     text-color:                  #c6d0f5;
-    font:                        "IoskeleyMono Nerd Font 14";
-    prompt-font:                 "IoskeleyMono Nerd Font Bold 14";
+    font:                        "JetBrainsMono Nerd Font 14";
+    prompt-font:                 "JetBrainsMono Nerd Font Bold 14";
     prompt-background:           #f4b8e4;
     prompt-foreground:           #303446;
     prompt-padding:              4px;
