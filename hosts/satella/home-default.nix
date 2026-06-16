@@ -1,12 +1,25 @@
 { ... }:
 {
   imports = [
-    ../../modules/home/git.nix
-    ../../modules/home/java.nix
-    ../../modules/home/nix-search.nix
-    ../../modules/home/sops.nix
-    ../../modules/home/spicetify.nix
-    ../../modules/home/vesktop.nix
-    ../../dots/dots.nix
+    ../../home/btop
+    ../../home/git
+    ../../home/helix
+    ../../home/java
+    ../../home/kitty
+    ../../home/lazydocker
+    ../../home/lazygit
+    ../../home/mango
+    ../../home/nix-search
+    ../../home/noctalia
+    ../../home/rofi
+    ../../home/scripts
+    ../../home/shell
+    ../../home/sops
+    ../../home/spicetify
+    ../../home/starship
+    ../../home/tmux
+    ../../home/vesktop
+    ../../home/yazi
+    ../../home/zathura
   ];
 }

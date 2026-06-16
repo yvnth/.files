@@ -15,20 +15,15 @@
 
   environment.systemPackages = with pkgs; [
     age
-    bash-language-server
     bat
     bibata-cursors
     bluetui
     brightnessctl
-    btop
     cargo-seek
-    clang-tools
     cliphist
     direnv
     docker-buildx
     docker-compose
-    dockerfile-language-server
-    dotnet-sdk
     dysk
     element-desktop
     eza
@@ -40,36 +35,23 @@
     gimp
     gnumake
     go
-    gopls
-    gradle
     grim
-    helix
-    jdt-language-server
     jq
     jujutsu
     just
     k9s
     kdePackages.kate
-    kdePackages.qtdeclarative
-    kitty
     kotlin
     kubectl
     kubernetes
     kubernetes-helm
-    lazydocker
-    lazygit
     lazyjj
     libnotify
     libqalculate
     libreoffice
-    lldb
     localsend
-    lua-language-server
     man-db
     man-pages
-    marksman
-    maven
-    mesonlsp
     microfetch
     mpv
     ncdu
@@ -77,59 +59,39 @@
     nh
     nitch
     nix-output-monitor
-    nixd
-    nixfmt
-    noctalia-shell
     nodejs
     nsxiv
     nwg-look
     obsidian
     odin
-    ols
-    omnisharp-roslyn
     papirus-icon-theme
     pass
     pastel
     pavucontrol
     php
-    phpactor
     postman
-    python3Packages.python-lsp-server
     python314
     python314Packages.pip
     python314Packages.uv
     ripgrep
-    rofi
     rofimoji
     rofi-pass-wayland
     ruby
-    ruff
-    rust-analyzer
     rustup
     satty
     slurp
     sops
-    starship
     swayidle
-    taplo
     tealdeer
-    tmux
-    tombi
     typescript
-    typescript-language-server
     typst
     unzip
     vscode
-    vscode-langservers-extracted
     wget
     wl-clipboard
     wl-screenrec
-    yaml-language-server
-    yazi
-    zathura
     zig
     zip
-    zls
     zoxide
   ];
 }

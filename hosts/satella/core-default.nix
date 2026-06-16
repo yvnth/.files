@@ -1,13 +1,13 @@
 { ... }:
 {
   imports = [
-    ../../modules/core/audio.nix
-    ../../modules/core/battery.nix
-    ../../modules/core/flatpak.nix
-    ../../modules/core/networking.nix
-    ../../modules/core/nvidia-intel.nix
-    ../../modules/core/services.nix
-    ../../modules/core/stylix.nix
-    ../../modules/core/virtualization.nix
+    ../../modules/audio.nix
+    ../../modules/battery.nix
+    ../../modules/flatpak.nix
+    ../../modules/networking.nix
+    ../../modules/nvidia-intel.nix
+    ../../modules/services.nix
+    ../../modules/stylix.nix
+    ../../modules/virtualization.nix
   ];
 }

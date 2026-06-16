@@ -1,8 +1,10 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    gradle
     jetbrains.idea-oss
     jdk21
+    maven
   ];
 
   home.sessionVariables.JAVA_HOME = "${pkgs.jdk21}";

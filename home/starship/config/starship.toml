@@ -7,7 +7,6 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
-$python\
 $fill\
 $cmd_duration\
 $line_break\
@@ -37,7 +36,7 @@ modified = "​"
 staged = "​"
 renamed = "​"
 deleted = "​"
-stashed = "≡"
+stashed = " "
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
