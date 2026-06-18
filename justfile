@@ -1,12 +1,14 @@
+hostname := `hostname -s`
+
 _default:
     @just --list
 
-rebuild host:
-    nh os switch . -H {{host}}
+rebuild host=hostname:
+    nh os switch . -H {{ host }}
 
-upgrade host:
+upgrade host=hostname:
     nix flake update
-    nh os switch . -H {{host}}
+    nh os switch . -H {{ host }}
 
 check:
     nix flake check
