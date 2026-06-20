@@ -12,7 +12,7 @@ jobs:
     outputs:
       changed: ${{ steps.changes.outputs.changed }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Remove bloat
         uses: wimpysworld/nothing-but-nix@main
@@ -25,7 +25,7 @@ jobs:
             trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCUSeBs=
 
       - name: Setup Cachix
-        uses: cachix/cachix-action@v14
+        uses: cachix/cachix-action@v17
         with:
           name: ${{ secrets.CACHIX_CACHE_NAME }}
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
@@ -44,7 +44,7 @@ jobs:
 
       - name: Upload flake.lock
         if: steps.changes.outputs.changed == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: flake_lock
           path: flake.lock
@@ -55,10 +55,10 @@ jobs:
     if: needs.update.outputs.changed == 'true'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Download flake.lock
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: flake_lock
 
@@ -73,7 +73,7 @@ jobs:
             trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCUSeBs=
 
       - name: Setup Cachix
-        uses: cachix/cachix-action@v14
+        uses: cachix/cachix-action@v17
         with:
           name: ${{ secrets.CACHIX_CACHE_NAME }}
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
@@ -97,12 +97,12 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download flake.lock
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: flake_lock
 
