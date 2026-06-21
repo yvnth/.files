@@ -3,8 +3,19 @@
   imports = [
     ./hardware-configuration.nix
     ./packages.nix
-    ./core-default.nix
+    ../../modules/core
   ];
+
+  modules = {
+    audio.enable = true;
+    battery.enable = true;
+    flatpak.enable = true;
+    networking.enable = true;
+    nvidia-intel.enable = true;
+    services.enable = true;
+    stylix.enable = true;
+    virtualization.enable = true;
+  };
 
   boot.loader = {
     systemd-boot.enable = lib.mkForce false;
