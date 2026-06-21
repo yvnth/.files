@@ -1,8 +1,8 @@
 keys:
-  - &yvnth_satella age1e5jfezvtqxeydsqlt3jupf6xga6mc3tpu45p0hupqs4w7n9j0fwqnec3fm
+  - &satella_yvnth age1e5jfezvtqxeydsqlt3jupf6xga6mc3tpu45p0hupqs4w7n9j0fwqnec3fm
 
 creation_rules:
   - path_regex: secrets/.*\.(yaml|json|ini|env|bin)$
     key_groups:
       - age:
-          - *yvnth_satella
+          - *satella_yvnth

@@ -1,0 +1,11 @@
+# Hosts
+
+| Hostname | Alias | Device | Role |
+|----------|-------|--------|------|
+| carmilla | witch of lust | — | — |
+| daphne | witch of gluttony | — | — |
+| echidna | witch of greed | — | future · server |
+| minerva | witch of wrath | — | — |
+| satella | witch of envy | Acer Nitro V15| main · developer laptop |
+| sekhmet | witch of sloth | — | future · gaming PC |
+| typhon | witch of pride | — | — |
