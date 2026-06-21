@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
   options.homeModules.lazygit.enable = lib.mkEnableOption "lazygit";
 

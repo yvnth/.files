@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
   options.homeModules.noctalia.enable = lib.mkEnableOption "noctalia";
 

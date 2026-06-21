@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
   options.modules.nvidia-intel.enable = lib.mkEnableOption "nvidia-intel";
 
