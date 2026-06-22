@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -10,26 +10,15 @@
     audio.enable = true;
     battery.enable = true;
     flatpak.enable = true;
+    lanzaboote.enable = true;
     networking.enable = true;
+    nix.enable = true;
     nvidia-intel.enable = true;
     services.enable = true;
     stylix.enable = true;
     virtualization.enable = true;
+    zram.enable = true;
   };
-
-  boot.loader = {
-    systemd-boot.enable = lib.mkForce false;
-    efi.canTouchEfiVariables = true;
-  };
-
-  boot.lanzaboote = {
-    enable = true;
-    pkiBundle = "/var/lib/sbctl";
-    autoGenerateKeys.enable = true;
-    autoEnrollKeys.enable = true;
-  };
-
-  environment.systemPackages = [ pkgs.sbctl ];
 
   hardware.bluetooth = {
     enable = true;
@@ -44,13 +33,6 @@
   time.timeZone = "Asia/Kolkata";
 
   i18n.defaultLocale = "en_US.UTF-8";
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
-  nixpkgs.config.allowUnfree = true;
 
   programs = {
     mango.enable = true;
@@ -86,13 +68,6 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-  };
-
-  zramSwap = {
-    enable = true;
-    algorithm = "lz4";
-    memoryPercent = 50;
-    priority = 100;
   };
 
   system.stateVersion = "25.11";

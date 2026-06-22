@@ -5,7 +5,7 @@
   home = {
     username = "yvnth";
     homeDirectory = "/home/yvnth";
-    stateVersion = "26.05";
+    stateVersion = "25.11";
   };
 
   homeModules = {
@@ -17,12 +17,16 @@
     lazydocker.enable = true;
     lazygit.enable = true;
     mango.enable = true;
+    nix-search.enable = true;
     rofi.enable = true;
     shell.enable = true;
+    sops.enable = true;
+    spicetify.enable = true;
     starship.enable = true;
     swaylock.enable = true;
     swaync.enable = true;
     tmux.enable = true;
+    vesktop.enable = true;
     waybar.enable = true;
     yazi.enable = true;
     zathura.enable = true;
