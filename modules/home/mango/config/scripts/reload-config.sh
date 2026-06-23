@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mmsg dispatch reload_config
+
 pkill waybar
 sleep 0.2
 waybar &
