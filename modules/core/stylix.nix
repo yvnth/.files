@@ -34,18 +34,18 @@
 
       fonts = {
         monospace = {
-          package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "JetBrainsMono Nerd Font";
+          package = pkgs.ioskeley-mono.normal-NF;
+          name = "IoskeleyMono Nerd Font";
         };
 
         sansSerif = {
-          package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "JetBrainsMono Nerd Font";
+          package = pkgs.ioskeley-mono.normal-NF;
+          name = "IoskeleyMono Nerd Font";
         };
 
         serif = {
-          package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "JetBrainsMono Nerd Font";
+          package = pkgs.ioskeley-mono.normal-NF;
+          name = "IoskeleyMono Nerd Font";
         };
 
         sizes = {
