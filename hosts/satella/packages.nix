@@ -18,7 +18,6 @@
     age
     bat
     bibata-cursors
-    bluetui
     brightnessctl
     cargo-seek
     cliphist
@@ -57,6 +56,7 @@
     mpv
     ncdu
     nemo
+    networkmanagerapplet
     nh
     nitch
     nix-output-monitor
