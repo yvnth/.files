@@ -14,14 +14,23 @@
         "flakes"
       ];
 
-      gc = {
-        automatic = true;
-        dates = "weekly";
-        options = "--delete-older-than 7d";
-      };
-
       registry.nixpkgs.flake = inputs.nixpkgs;
       nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+    };
+
+    services = {
+      fast-nix-gc = {
+        enable = true;
+        automatic = true;
+        dates = "weekly";
+        deleteOlderThan = "30d";
+      };
+
+      fast-nix-optimise = {
+        enable = true;
+        automatic = true;
+        dates = "weekly";
+      };
     };
 
     nixpkgs.config.allowUnfree = true;

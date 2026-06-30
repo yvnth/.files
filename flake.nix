@@ -25,6 +25,11 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
+    fast-nix-gc = {
+      url = "github:Mic92/fast-nix-gc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -53,6 +58,7 @@
       mangowm,
       nix-flatpak,
       nixpkgs,
+      fast-nix-gc,
       spicetify-nix,
       stylix,
       yvnthx,
@@ -73,6 +79,7 @@
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
+          fast-nix-gc.nixosModules.default
 
           {
             home-manager = {
