@@ -379,7 +379,8 @@
         "nixpkgs": "nixpkgs",
         "sops-nix": "sops-nix",
         "spicetify-nix": "spicetify-nix",
-        "stylix": "stylix"
+        "stylix": "stylix",
+        "yvnthx": "yvnthx"
       }
     },
     "rust-overlay": {
@@ -589,6 +590,26 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
+        "type": "github"
+      }
+    },
+    "yvnthx": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782813508,
+        "narHash": "sha256-hXsunGPAO2zdzYWMZ8lIw880Mcy2nyJJzToZwKHJexc=",
+        "owner": "yvnth",
+        "repo": "yvnthx",
+        "rev": "36a74c1cd6355c9ab2242b73eba8c4665f4d1e50",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yvnth",
+        "repo": "yvnthx",
         "type": "github"
       }
     }
