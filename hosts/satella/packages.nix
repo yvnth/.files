@@ -16,15 +16,14 @@
   environment.systemPackages = with pkgs; [
     acpi
     age
-    bat
     bibata-cursors
     brightnessctl
     cargo-seek
     cliphist
     devenv
+    direnv
     docker-buildx
     docker-compose
-    dysk
     element-desktop
     eza
     fastfetch
@@ -32,7 +31,6 @@
     firefox-devedition
     fzf
     gcc
-    gimp
     gnumake
     go
     grim
@@ -45,20 +43,15 @@
     kubectl
     kubernetes
     kubernetes-helm
-    lazyjj
     libnotify
-    libqalculate
     libreoffice
     localsend
     man-db
     man-pages
-    microfetch
     mpv
-    ncdu
     nemo
     networkmanagerapplet
     nh
-    nitch
     nix-output-monitor
     nodejs
     nsxiv
@@ -67,7 +60,6 @@
     odin
     papirus-icon-theme
     pass
-    pastel
     pavucontrol
     php
     postman
@@ -84,7 +76,6 @@
     sops
     swaybg
     swayidle
-    tealdeer
     typescript
     typst
     unzip
