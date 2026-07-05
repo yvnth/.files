@@ -17,6 +17,7 @@
     acpi
     age
     bibata-cursors
+    bootdev-cli
     brightnessctl
     cargo-seek
     cliphist
@@ -34,6 +35,7 @@
     gnumake
     go
     grim
+    helix
     jq
     jujutsu
     just

@@ -1,0 +1,218 @@
+[[language]]
+name = "bash"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "c"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "c-sharp"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["omnisharp"]
+
+[[language]]
+name = "cpp"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "docker-compose"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["docker-compose-language-service"]
+
+[[language]]
+name = "dockerfile"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "go"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "helm"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["helm-ls"]
+
+[[language]]
+name = "html"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "javascript"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "json"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "jq"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["jq-lsp"]
+
+[[language]]
+name = "jsx"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "just"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["just-lsp"]
+
+[[language]]
+name = "lua"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "markdown"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "meson"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["mesonlsp"]
+
+[[language]]
+name = "nix"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["nixd"]
+
+[[language]]
+name = "odin"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["ols"]
+
+[[language]]
+name = "php"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["phpactor"]
+
+[[language]]
+name = "python"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["pylsp"]
+
+[[language]]
+name = "qml"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["qmlls"]
+
+[[language]]
+name = "ruby"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["ruby-lsp"]
+
+[[language]]
+name = "rust"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["rust-analyzer"]
+
+[[language]]
+name = "toml"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["taplo", "tombi"]
+
+[[language]]
+name = "tsx"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "typescript"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "typst"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["tinymist"]
+
+[[language]]
+name = "xml"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "yaml"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "zig"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[language-server.docker-compose-language-service]
+command = "docker-compose-language-service"
+
+[language-server.helm-ls]
+command = "helm_ls"
+
+[language-server.jq-lsp]
+command = "jq-lsp"
+
+[language-server.just-lsp]
+command = "just-lsp"
+
+[language-server.mesonlsp]
+command = "mesonlsp"
+
+[language-server.nixd]
+command = "nixd"
+
+[language-server.ols]
+command = "ols"
+
+[language-server.omnisharp]
+command = "OmniSharp"
+
+[language-server.phpactor]
+command = "phpactor"
+
+[language-server.pylsp]
+command = "pylsp"
+
+[language-server.qmlls]
+command = "qmlls"
+
+[language-server.ruby-lsp]
+command = "ruby-lsp"
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.taplo]
+command = "taplo"
+
+[language-server.tinymist]
+command = "tinymist"
+
+[language-server.tombi]
+command = "tombi"
+args = ["lsp"]

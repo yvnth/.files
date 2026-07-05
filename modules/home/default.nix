@@ -3,6 +3,7 @@
   imports = [
     ./btop
     ./git
+    ./helix
     ./java
     ./lazydocker
     ./lazygit

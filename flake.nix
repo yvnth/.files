@@ -44,11 +44,6 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    yvnthx = {
-      url = "github:yvnth/yvnthx";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -61,7 +56,6 @@
       fast-nix-gc,
       spicetify-nix,
       stylix,
-      yvnthx,
       ...
     }@inputs:
     {
@@ -113,7 +107,6 @@
                   ./hosts/satella/home.nix
                   inputs.sops-nix.homeManagerModules.sops
                   spicetify-nix.homeManagerModules.default
-                  yvnthx.homeManagerModules.default
                 ];
               };
             };
