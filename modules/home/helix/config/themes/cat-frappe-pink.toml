@@ -60,7 +60,7 @@
 "diff.minus" = "red"
 "diff.delta" = "blue"
 
-"ui.background" = { fg = "text", bg = "base" }
+"ui.background" = { fg = "text" }
 
 "ui.linenr" = { fg = "surface1" }
 "ui.linenr.selected" = { fg = "lavender" }
