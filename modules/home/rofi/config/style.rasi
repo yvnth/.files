@@ -2,8 +2,8 @@
     background-color:            #303446;
     border-color:                #f4b8e4;
     text-color:                  #c6d0f5;
-    font:                        "IoskeleyMono Nerd Font 15";
-    prompt-font:                 "IoskeleyMono Nerd Font Bold 15";
+    font:                        "JetBrainsMono Nerd Font 13";
+    prompt-font:                 "JetBrainsMono Nerd Font Bold 13";
     prompt-background:           #f4b8e4;
     prompt-foreground:           #303446;
     prompt-padding:              4px;
@@ -19,56 +19,56 @@ configuration {
 }
 
 #window {
-    border:  2;
+    border: 2;
     padding: 5;
     border-radius: 0;
 }
 
 #mainbox {
-    border:  0;
+    border: 0;
     padding: 0;
     border-radius: 0;
 }
 
 #message {
-    border:   1px dash 0px 0px;
-    padding:  1px;
+    border: 1px dash 0px 0px;
+    padding: 1px;
     border-radius: 0;
 }
 
 #listview {
     fixed-height: 0;
-    border:       2px solid 0px 0px;
+    border: 2px solid 0px 0px;
     border-color: #292c3c;
-    spacing:      2px;
-    scrollbar:    true;
-    padding:      2px 0px 0px;
+    spacing: 2px;
+    scrollbar: true;
+    padding: 2px 0px 0px;
     border-radius: 0;
 }
 
 #element {
-    border:  0;
+    border: 0;
     padding: 3px;
     border-radius: 0;
 }
 
 #element.selected.normal {
     background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    text-color: @selected-normal-foreground;
     border-radius: 0;
 }
 
 #element.alternate.normal {
     background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
+    text-color: @alternate-normal-foreground;
     border-radius: 0;
 }
 
 #scrollbar {
-    width:        0px;
-    border:       0;
+    width: 0px;
+    border: 0;
     handle-width: 0px;
-    padding:      0;
+    padding: 0;
     border-radius: 0;
 }
 
@@ -79,7 +79,7 @@ configuration {
 
 #button.selected {
     background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    text-color: @selected-normal-foreground;
     border-radius: 0;
 }
 
@@ -96,21 +96,21 @@ configuration {
 
 #entry {
     padding: 4px 4px;
-    expand:  false;
-    width:   10em;
+    expand: false;
+    width: 10em;
     border-radius: 0;
 }
 
 #prompt {
-    padding:          @prompt-padding;
+    padding: @prompt-padding;
     background-color: @prompt-background;
-    text-color:       @prompt-foreground;
-    font:             @prompt-font;
-    border-radius:    0;
+    text-color: @prompt-foreground;
+    font: @prompt-font;
+    border-radius: 0;
 }
 
 element-text {
     background-color: inherit;
-    text-color:       inherit;
+    text-color: inherit;
     border-radius: 0;
 }

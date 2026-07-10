@@ -26,8 +26,8 @@
 }
 
 * {
-  font-family: "IoskeleyMono Nerd Font";
-  font-size: 18px;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-size: 16px;
   font-weight: 600;
   color: @text;
   border-radius: 0;
@@ -45,7 +45,7 @@
 }
 
 .control-center-list-placeholder {
-  padding: 12px;
+  padding: 10px;
   color: @subtext;
 }
 
@@ -95,7 +95,7 @@
 
 .notification-content {
   background: transparent;
-  padding: 6px 8px;
+  padding: 8px 10px;
   border-radius: 0;
 }
 
@@ -103,7 +103,7 @@
 .notification-action {
   background: transparent;
   border-radius: 0;
-  padding: 4px;
+  padding: 6px;
 }
 
 .notification-default-action:hover,
@@ -112,15 +112,16 @@
 }
 
 .notification-default-action image {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .notification-default-action .summary {
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .notification-default-action .body {
-  font-size: 12px;
+  font-size: 14px;
   color: @subtext;
 }
 
@@ -136,7 +137,7 @@
   color: @bg;
 }
 
-.widgets > .widget {
+.widgets>.widget {
   background: @surface0;
   border-radius: 0;
   padding: 8px;
@@ -151,7 +152,7 @@
   border: 2px solid @pink;
 }
 
-.widget-title > button {
+.widget-title>button {
   background: @pink;
   color: @bg;
   border-radius: 0;
@@ -159,15 +160,15 @@
   font-weight: 700;
 }
 
-.widget-title > button * {
+.widget-title>button * {
   color: @bg;
 }
 
-.widget-title > button:hover {
+.widget-title>button:hover {
   background: @flamingo;
 }
 
-.widget-title > button:hover * {
+.widget-title>button:hover * {
   color: @bg;
 }
 
@@ -178,22 +179,22 @@
   padding: 8px;
 }
 
-.widget-dnd > switch {
+.widget-dnd>switch {
   background: @surface1;
   border-radius: 0;
 }
 
-.widget-dnd > switch:checked {
+.widget-dnd>switch:checked {
   background: @pink;
 }
 
-.widget-buttons-grid > flowbox > flowboxchild > button {
+.widget-buttons-grid>flowbox>flowboxchild>button {
   background: @surface0;
   border-radius: 0;
   border: 2px solid @pink;
 }
 
-.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
   background: @surface1;
 }
 

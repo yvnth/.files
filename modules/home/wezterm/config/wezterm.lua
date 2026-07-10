@@ -6,7 +6,7 @@ return {
     max_fps = 144,
 
     font = wezterm.font_with_fallback({
-        { family = "IoskeleyMono Nerd Font", weight = "Regular" },
+        { family = "JetBrainsMono Nerd Font", weight = "Regular" },
     }),
     font_size = 22.0,
     line_height = 1.00,

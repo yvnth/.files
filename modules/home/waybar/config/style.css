@@ -3,7 +3,7 @@
 @define-color bg #303446;
 
 * {
-  font-family: "IoskeleyMono Nerd Font";
+  font-family: "JetBrainsMono Nerd Font Propo";
   font-size: 17px;
   font-weight: 600;
   border: none;
@@ -110,11 +110,11 @@ window#waybar {
   padding-right: 4px;
 }
 
-#tray > .passive {
+#tray>.passive {
   -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
   -gtk-icon-effect: highlight;
 }
 
