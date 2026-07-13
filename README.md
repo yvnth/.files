@@ -16,10 +16,10 @@ Clone the repo and replace the placeholder hardware config with the one NixOS
 generated for your machine during installation:
 
 ```bash
-git clone https://github.com/yvnth/dotfiles.git ~/dotfiles
-rm ~/dotfiles/hosts/<hostname>/hardware-configuration.nix
-sudo cp /etc/nixos/hardware-configuration.nix ~/dotfiles/hosts/<hostname>/hardware-configuration.nix
-sudo chown -R yvnth:users ~/dotfiles
+git clone https://github.com/yvnth/dotfiles.git ~/.files
+rm ~/.files/hosts/<hostname>/hardware-configuration.nix
+sudo cp /etc/nixos/hardware-configuration.nix ~/.files/hosts/<hostname>/hardware-configuration.nix
+sudo chown -R yvnth:users ~/.files
 ```
 
 ### 3. Copy Age Key
@@ -45,7 +45,7 @@ sudo find /var/lib/sbctl/keys -name "*.key" -exec chmod 600 {} \;
 ### 5. Build and Switch
 
 ```bash
-nixos-rebuild switch --flake ~/dotfiles#<hostname> --sudo
+sudo nixos-rebuild switch --flake ~/.files#<hostname>
 reboot
 ```
 

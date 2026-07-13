@@ -13,6 +13,6 @@
     ];
 
     home.file.".config/tmux".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/tmux/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/modules/home/tmux/config";
   };
 }

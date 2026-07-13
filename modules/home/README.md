@@ -16,7 +16,7 @@ Each module lives in its own directory under `modules/home/`.
     ];
 
     home.file.".config/<name>".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/<name>/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/modules/home/<name>/config";
   };
 }
 ```

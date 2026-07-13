@@ -5,5 +5,5 @@ let
 in
 {
   home.file.".config/scripts".source =
-    mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/scripts/config";
+    mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/modules/home/scripts/config";
 }

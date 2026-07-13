@@ -13,6 +13,6 @@
     ];
 
     home.file.".config/lazygit".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/lazygit/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/modules/home/lazygit/config";
   };
 }

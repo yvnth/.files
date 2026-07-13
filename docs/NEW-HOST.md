@@ -68,5 +68,5 @@ creation_rules:
 ## 7. Build and Switch
 
 ```bash
-nixos-rebuild switch --flake ~/dotfiles#<hostname> --sudo
+sudo nixos-rebuild switch --flake ~/.files#<hostname>
 ```

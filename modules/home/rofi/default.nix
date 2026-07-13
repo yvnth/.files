@@ -13,6 +13,6 @@
     ];
 
     home.file.".config/rofi".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/rofi/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/modules/home/rofi/config";
   };
 }

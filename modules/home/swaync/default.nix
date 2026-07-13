@@ -14,6 +14,6 @@
     ];
 
     home.file.".config/swaync".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/swaync/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/modules/home/swaync/config";
   };
 }

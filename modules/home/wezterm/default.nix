@@ -13,6 +13,6 @@
     ];
 
     home.file.".config/wezterm".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/wezterm/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/modules/home/wezterm/config";
   };
 }

@@ -14,6 +14,6 @@
     ];
 
     home.file.".config/waybar".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/waybar/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/modules/home/waybar/config";
   };
 }

@@ -14,6 +14,6 @@
     ];
 
     home.file.".config/swaylock".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/swaylock/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/modules/home/swaylock/config";
   };
 }

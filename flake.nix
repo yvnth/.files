@@ -2,6 +2,11 @@
   description = "yvnth's NixOS config";
 
   inputs = {
+    fast-nix-gc = {
+      url = "github:Mic92/fast-nix-gc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,11 +30,6 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
-    fast-nix-gc = {
-      url = "github:Mic92/fast-nix-gc";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -48,12 +48,13 @@
 
   outputs =
     {
+      fast-nix-gc,
       home-manager,
       lanzaboote,
       mangowm,
       nix-flatpak,
       nixpkgs,
-      fast-nix-gc,
+      sops-nix,
       spicetify-nix,
       stylix,
       ...
@@ -105,7 +106,7 @@
               users.yvnth = {
                 imports = [
                   ./hosts/satella/home.nix
-                  inputs.sops-nix.homeManagerModules.sops
+                  sops-nix.homeManagerModules.sops
                   spicetify-nix.homeManagerModules.default
                 ];
               };
