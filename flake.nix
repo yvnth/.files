@@ -79,13 +79,14 @@
           {
             nixpkgs.overlays = [
               (final: prev: {
-                xdg-desktop-portal-wlr = prev.xdg-desktop-portal-wlr.overrideAttrs (old: rec {
-                  version = "0.8.2";
+                xdg-desktop-portal-wlr = prev.xdg-desktop-portal-wlr.overrideAttrs (_: {
+                  version = "0.7.0";
+
                   src = prev.fetchFromGitHub {
                     owner = "emersion";
                     repo = "xdg-desktop-portal-wlr";
-                    rev = "v${version}";
-                    hash = "sha256-HITf/hgiASWvn/z49mzS8IS1vuyXwdk1JiAOOHRSQMo=";
+                    rev = "776113a4f014639c29d8de8fcb513493ef7b491f";
+                    hash = "sha256-EwBHkXFEPAEgVUGC/0e2Bae/rV5lec1ttfbJ5ce9cKw=";
                   };
                 });
               })
