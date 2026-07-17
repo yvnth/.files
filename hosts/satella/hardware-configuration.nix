@@ -15,40 +15,11 @@
     "thunderbolt"
     "vmd"
     "nvme"
-    "usb_storage"
-    "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" = {
-    device = "/dev/mapper/cryptroot";
-    fsType = "btrfs";
-    options = [ "subvol=@" ];
-  };
-
-  boot.initrd.luks.devices."cryptroot".device =
-    "/dev/disk/by-uuid/506e62d5-178a-4297-b6fb-28fce445ad4a";
-
-  fileSystems."/home" = {
-    device = "/dev/mapper/cryptroot";
-    fsType = "btrfs";
-    options = [ "subvol=@home" ];
-  };
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/3B50-57A4";
-    fsType = "vfat";
-    options = [
-      "fmask=0077"
-      "dmask=0077"
-    ];
-  };
-
-  swapDevices = [ ];
-
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

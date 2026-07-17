@@ -2,6 +2,11 @@
   description = "yvnth's NixOS config";
 
   inputs = {
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     fast-nix-gc = {
       url = "github:Mic92/fast-nix-gc";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -48,6 +53,7 @@
 
   outputs =
     {
+      disko,
       fast-nix-gc,
       home-manager,
       lanzaboote,
@@ -62,13 +68,12 @@
     {
       nixosConfigurations.satella = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-
         specialArgs = {
           inherit inputs;
         };
-
         modules = [
           ./hosts/satella/configuration.nix
+          disko.nixosModules.disko
           lanzaboote.nixosModules.lanzaboote
           mangowm.nixosModules.mango
           nix-flatpak.nixosModules.nix-flatpak
@@ -81,7 +86,6 @@
               (final: prev: {
                 xdg-desktop-portal-wlr = prev.xdg-desktop-portal-wlr.overrideAttrs (_: {
                   version = "0.7.0";
-
                   src = prev.fetchFromGitHub {
                     owner = "emersion";
                     repo = "xdg-desktop-portal-wlr";
@@ -96,14 +100,11 @@
           {
             home-manager = {
               backupFileExtension = "bak";
-
               extraSpecialArgs = {
                 inherit inputs;
               };
-
               useGlobalPkgs = true;
               useUserPackages = true;
-
               users.yvnth = {
                 imports = [
                   ./hosts/satella/home.nix

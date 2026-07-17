@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./disko.nix
     ./hardware-configuration.nix
     ./packages.nix
     ../../modules/core
@@ -55,6 +56,7 @@
     isNormalUser = true;
     description = "yvnth";
     shell = pkgs.zsh;
+    initialPassword = "changeme";
     extraGroups = [
       "wheel"
       "networkmanager"
