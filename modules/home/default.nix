@@ -2,6 +2,7 @@
 {
   imports = [
     ./btop
+    ./fastfetch
     ./git
     ./helix
     ./java

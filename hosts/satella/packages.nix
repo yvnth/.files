@@ -27,7 +27,6 @@
     docker-compose
     element-desktop
     eza
-    fastfetch
     fd
     firefox-devedition
     fzf
