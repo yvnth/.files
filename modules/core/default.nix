@@ -9,6 +9,7 @@
     ./nix.nix
     ./nvidia-intel.nix
     ./services.nix
+    ./sops.nix
     ./stylix.nix
     ./virtualization.nix
     ./zram.nix

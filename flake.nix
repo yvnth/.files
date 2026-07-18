@@ -71,15 +71,17 @@
         specialArgs = {
           inherit inputs;
         };
+
         modules = [
           ./hosts/satella/configuration.nix
           disko.nixosModules.disko
+          fast-nix-gc.nixosModules.default
+          home-manager.nixosModules.home-manager
           lanzaboote.nixosModules.lanzaboote
           mangowm.nixosModules.mango
           nix-flatpak.nixosModules.nix-flatpak
-          home-manager.nixosModules.home-manager
+          sops-nix.nixosModules.sops
           stylix.nixosModules.stylix
-          fast-nix-gc.nixosModules.default
 
           {
             nixpkgs.overlays = [
@@ -108,7 +110,6 @@
               users.yvnth = {
                 imports = [
                   ./hosts/satella/home.nix
-                  sops-nix.homeManagerModules.sops
                   spicetify-nix.homeManagerModules.default
                 ];
               };

@@ -16,6 +16,7 @@
     nix.enable = true;
     nvidia-intel.enable = true;
     services.enable = true;
+    sops.enable = true;
     stylix.enable = true;
     virtualization.enable = true;
     zram.enable = true;

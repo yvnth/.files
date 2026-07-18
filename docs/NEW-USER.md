@@ -24,13 +24,11 @@ Create `hosts/<hostname>/home.nix` for the user, use `hosts/satella/home.nix` as
 { ... }:
 {
   imports = [ ../../modules/home ];
-
   home = {
     username = "<username>";
     homeDirectory = "/home/<username>";
     stateVersion = "25.11";
   };
-
   homeModules = {
     # enable modules as needed
   };
@@ -45,7 +43,6 @@ Add the user under `home-manager.users` in `flake.nix`:
 home-manager.users.<username> = {
   imports = [
     ./hosts/<hostname>/home.nix
-    inputs.sops-nix.homeManagerModules.sops
   ];
 };
 ```
@@ -64,13 +61,15 @@ Add secrets if needed:
 sops secrets/<hostname>/<username>/<name>.yaml
 ```
 
-Reference them in the relevant module:
+Reference them in `modules/core/sops.nix`:
 
 ```nix
 sops.secrets.<name> = {
-  sopsFile = ../../../secrets/<hostname>/<username>/<name>.yaml;
+  sopsFile = ../../secrets/<hostname>/<username>/<name>.yaml;
   key = "<key>";
-  path = "${config.home.homeDirectory}/path/to/secret";
+  path = "/home/<username>/path/to/secret";
+  owner = "<username>";
+  mode = "0400";
 };
 ```
 

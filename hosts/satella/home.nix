@@ -20,7 +20,6 @@
     nix-search.enable = true;
     rofi.enable = true;
     shell.enable = true;
-    sops.enable = true;
     spicetify.enable = true;
     starship.enable = true;
     swaylock.enable = true;

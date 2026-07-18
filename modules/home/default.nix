@@ -13,7 +13,6 @@
     ./rofi
     ./scripts
     ./shell
-    ./sops
     ./spicetify
     ./starship
     ./swaylock

@@ -22,11 +22,9 @@ Add the host under `nixosConfigurations` in `flake.nix`:
 ```nix
 nixosConfigurations.<hostname> = nixpkgs.lib.nixosSystem {
   system = "x86_64-linux"; # or aarch64-linux, aarch64-darwin, x86_64-darwin
-
   specialArgs = {
     inherit inputs;
   };
-
   modules = [
     ./hosts/<hostname>/configuration.nix
     # ...other modules
@@ -49,7 +47,16 @@ mkdir -p secrets/<hostname>/<user>
 Generate a new age key on the new host:
 
 ```bash
-age-keygen -o ~/.config/sops/age/keys.txt
+sudo mkdir -p /var/lib/sops-nix
+sudo age-keygen -o /var/lib/sops-nix/key.txt
+sudo chmod 600 /var/lib/sops-nix/key.txt
+sudo chown root:root /var/lib/sops-nix/key.txt
+```
+
+Get the public key:
+
+```bash
+sudo age-keygen -y /var/lib/sops-nix/key.txt
 ```
 
 Add the public key to `.sops.yaml`:
@@ -57,7 +64,6 @@ Add the public key to `.sops.yaml`:
 ```yaml
 keys:
   - &<hostname>_<username> age1...
-
 creation_rules:
   - path_regex: secrets/<hostname>/.*\.(yaml|json|ini|env|bin)$
     key_groups:
