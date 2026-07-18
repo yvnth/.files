@@ -26,13 +26,14 @@ window#waybar {
   margin: 0;
 }
 
-#tags {
+#workspaces,
+#layout {
   background: @bg;
   margin: 0;
   padding: 0;
 }
 
-#tags button {
+#workspaces button {
   background: @bg;
   color: alpha(@pink, 0.6);
   padding: 2px 8px;
@@ -41,27 +42,52 @@ window#waybar {
   transition: all 0.2s ease;
 }
 
-#tags button.empty {
+#workspaces button.hidden {
   color: alpha(@pink, 0.35);
 }
 
-#tags button.occupied,
-#tags button.visible {
+#workspaces button.visible {
   color: @pink;
-  background: alpha(@pink, 0.10);
 }
 
-#tags button.active,
-#tags button.selected,
-#tags button.focused,
-#tags button.current {
-  color: @bg;
+#workspaces button.active {
   background: @pink;
+  color: @bg;
 }
 
-#tags button:hover {
+#workspaces button.urgent,
+#workspaces button.overview {
+  background: @pink;
+  color: @bg;
+}
+
+#workspaces button:hover {
   background: alpha(@pink, 0.18);
   color: @pink;
+}
+
+#layout {
+  color: @pink;
+  padding: 2px 8px;
+}
+
+#window {
+  color: @pink;
+  background: @bg;
+  padding: 2px 8px;
+}
+
+window#waybar.empty #window {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+#language,
+#keymode {
+  color: @pink;
+  background: @bg;
+  padding: 2px 8px;
 }
 
 #network,
@@ -75,18 +101,13 @@ window#waybar {
 #disk,
 #custom-launcher,
 #custom-power,
-#custom-notifications,
-#custom-layout {
+#custom-notifications {
   background: @bg;
   color: @pink;
-  border-radius: 0;
   padding: 2px 6px;
   margin: 0;
+  border-radius: 0;
   transition: color 0.2s;
-}
-
-#custom-layout {
-  padding-left: 8px;
 }
 
 #network.disconnected {

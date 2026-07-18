@@ -5,7 +5,7 @@ sort_dir_first = true
 
 [opener]
 edit = [{ run = 'hx "$@"', block = true }]
-image = [{ run = 'nsxiv "$@"', orphan = true }]
+image = [{ run = 'imv "$@"', orphan = true }]
 pdf = [{ run = 'zathura "$@"', orphan = true }]
 video = [{ run = 'mpv "$@"', orphan = true }]
 

@@ -49,6 +49,11 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    waybar = {
+      url = "github:Alexays/Waybar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -63,6 +68,7 @@
       sops-nix,
       spicetify-nix,
       stylix,
+      waybar,
       ...
     }@inputs:
     {
@@ -85,6 +91,8 @@
 
           {
             nixpkgs.overlays = [
+              waybar.overlays.default
+
               (final: prev: {
                 xdg-desktop-portal-wlr = prev.xdg-desktop-portal-wlr.overrideAttrs (_: {
                   version = "0.7.0";

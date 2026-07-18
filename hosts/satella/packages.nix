@@ -21,8 +21,6 @@
     brightnessctl
     cargo-seek
     cliphist
-    devenv
-    direnv
     docker-buildx
     docker-compose
     element-desktop
@@ -31,19 +29,18 @@
     firefox-devedition
     fzf
     gcc
+    gh
     gnumake
     go
     grim
     helix
+    imv
     jq
     jujutsu
     just
     k9s
     kdePackages.kate
     kotlin
-    kubectl
-    kubernetes
-    kubernetes-helm
     libnotify
     libreoffice
     localsend
@@ -55,9 +52,7 @@
     nh
     nix-output-monitor
     nodejs
-    nsxiv
     nwg-look
-    obsidian
     odin
     papirus-icon-theme
     pass
