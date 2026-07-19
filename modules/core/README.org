@@ -1,0 +1,35 @@
+#+title: Core Modules
+#+author: yvnth
+#+options: toc:nil
+
+Each module lives as a =.nix= file under =modules/core/=.
+
+* Adding a New Module
+
+1. Create =modules/core/<name>.nix=:
+
+#+begin_src nix
+{ lib, config, ... }:
+{
+  options.modules.<name>.enable = lib.mkEnableOption "<name>";
+
+  config = lib.mkIf config.modules.<name>.enable {
+    # your config here
+  };
+}
+#+end_src
+
+2. Add it to =modules/core/default.nix=:
+
+#+begin_src nix
+imports = [
+  # ...existing...
+  ./<name>.nix
+];
+#+end_src
+
+3. Enable it in =hosts/<hostname>/configuration.nix=:
+
+#+begin_src nix
+modules.<name>.enable = true;
+#+end_src

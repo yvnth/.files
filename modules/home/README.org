@@ -1,11 +1,14 @@
-# Home Modules
+#+title: Home Modules
+#+author: yvnth
+#+options: toc:nil
 
-Each module lives in its own directory under `modules/home/`.
+Each module lives in its own directory under =modules/home/=.
 
-## Adding a New Module
+* Adding a New Module
 
-1. Create `modules/home/<name>/default.nix`:
-```nix
+1. Create =modules/home/<name>/default.nix=:
+
+#+begin_src nix
 { lib, config, pkgs, ... }:
 {
   options.homeModules.<name>.enable = lib.mkEnableOption "<name>";
@@ -19,17 +22,19 @@ Each module lives in its own directory under `modules/home/`.
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.files/modules/home/<name>/config";
   };
 }
-```
+#+end_src
 
-2. Add to `modules/home/default.nix`:
-```nix
+2. Add it to =modules/home/default.nix=:
+
+#+begin_src nix
 imports = [
   # ...existing...
   ./<name>
 ];
-```
+#+end_src
 
-3. Enable in `hosts/<hostname>/home.nix`:
-```nix
+3. Enable it in =hosts/<hostname>/home.nix=:
+
+#+begin_src nix
 homeModules.<name>.enable = true;
-```
+#+end_src

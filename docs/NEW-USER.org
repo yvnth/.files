@@ -1,10 +1,12 @@
-# Adding a New User
+#+title: Adding a New User
+#+author: yvnth
+#+options: toc:nil
 
-## 1. Add User to System Config
+** 1. Add User to System Config
 
-Add the user to `hosts/<hostname>/configuration.nix`:
+Add the user to =hosts/<hostname>/configuration.nix=:
 
-```nix
+#+begin_src nix
 users.users.<username> = {
   isNormalUser = true;
   description = "<username>";
@@ -14,56 +16,58 @@ users.users.<username> = {
     "networkmanager"
   ];
 };
-```
+#+end_src
 
-## 2. Create Home Config
+** 2. Create Home Config
 
-Create `hosts/<hostname>/home.nix` for the user, use `hosts/satella/home.nix` as reference:
+Create =hosts/<hostname>/home.nix= for the user, using =hosts/satella/home.nix= as a reference:
 
-```nix
+#+begin_src nix
 { ... }:
 {
   imports = [ ../../modules/home ];
+
   home = {
     username = "<username>";
     homeDirectory = "/home/<username>";
     stateVersion = "25.11";
   };
+
   homeModules = {
     # enable modules as needed
   };
 }
-```
+#+end_src
 
-## 3. Add to Home Manager in Flake
+** 3. Add to Home Manager in Flake
 
-Add the user under `home-manager.users` in `flake.nix`:
+Add the user under =home-manager.users= in =flake.nix=:
 
-```nix
+#+begin_src nix
 home-manager.users.<username> = {
   imports = [
     ./hosts/<hostname>/home.nix
   ];
 };
-```
+#+end_src
 
-## 4. Create Secrets Directory
+** 4. Create Secrets Directory
 
-```bash
+#+begin_src bash
 mkdir -p secrets/<hostname>/<username>
-```
+#+end_src
 
-## 5. Add Secrets
+** 5. Add Secrets
 
 Add secrets if needed:
 
-```bash
+#+begin_src bash
 sops secrets/<hostname>/<username>/<name>.yaml
-```
+#+end_src
 
-Reference them in `modules/core/sops.nix`:
+Reference them in =modules/core/sops.nix=:
 
-```nix
+#+begin_src nix
 sops.secrets.<name> = {
   sopsFile = ../../secrets/<hostname>/<username>/<name>.yaml;
   key = "<key>";
@@ -71,10 +75,10 @@ sops.secrets.<name> = {
   owner = "<username>";
   mode = "0400";
 };
-```
+#+end_src
 
-## 6. Build and Switch
+** 6. Build and Switch
 
-```bash
+#+begin_src bash
 sudo nixos-rebuild switch --flake ~/.files#<hostname>
-```
+#+end_src

@@ -1,0 +1,34 @@
+#+title: NixOS dotfiles ❄️
+#+author: yvnth
+#+options: toc:nil
+
+Personal [[https://nixos.org/][NixOS]] configuration, managed with [[https://github.com/nix-community/home-manager][home-manager]] and [[https://wiki.nixos.org/wiki/Flakes][flakes]].
+
+See [[file:docs/BOOTSTRAP.org][BOOTSTRAP]] for fresh install instructions.
+
+* Repo layout
+
+#+begin_example
+docs/             # documentation
+hosts/            # per-machine configuration
+modules/core/     # system-level NixOS modules
+modules/home/     # home-manager modules
+secrets/          # sops-nix encrypted secrets, per host/user
+#+end_example
+
+* Documentation
+
+- [[file:modules/core/README.org][Adding a core module]]
+- [[file:modules/home/README.org][Adding a home module]]
+- [[file:docs/NEW-HOST.org][Adding a new host]]
+- [[file:docs/NEW-USER.org][Adding a new user]]
+- [[file:hosts/README.org][Hosts]]
+- [[file:secrets/README.org][Managing secrets]]
+
+* Stack
+
+- *Boot:* [[https://github.com/nix-community/lanzaboote][Lanzaboote]]
+- *Disk layout:* BTRFS encrypted root via [[https://github.com/nix-community/disko][disko]]
+- *Secrets:* [[https://github.com/Mic92/sops-nix][sops-nix]] + [[https://github.com/FiloSottile/age][age]]
+- *Theming:* [[https://github.com/nix-community/stylix][stylix]]
+- *Window manager:* [[https://github.com/mangowm/mango][mango]]
