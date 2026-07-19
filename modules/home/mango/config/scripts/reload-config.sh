@@ -11,6 +11,6 @@ notify-send \
   -u low \
   -t 3000 \
   -h string:x-canonical-private-synchronous:mango-reload \
-  -i "$HOME/.config/mango/assets/mango.svg" \
+  -i "$HOME/.config/mango/assets/mango.png" \
   "󱁽 Config Reloaded" \
   "Mango configuration reloaded"

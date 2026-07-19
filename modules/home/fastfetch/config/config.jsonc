@@ -28,25 +28,12 @@
       "key": "Kernel       "
     },
     {
-      "type": "shell",
-      "key": "Shell        "
-    },
-    {
       "type": "uptime",
       "key": "Uptime       "
     },
     {
       "type": "wm",
       "key": "Desktop      "
-    },
-    {
-      "type": "memory",
-      "key": "Memory       "
-    },
-    {
-      "type": "disk",
-      "key": "Storage (/)  ",
-      "folders": "/"
     },
     {
       "type": "colors",

@@ -15,6 +15,7 @@
 
   environment.systemPackages = with pkgs; [
     acpi
+    gimp
     age
     bibata-cursors
     bootdev-cli
