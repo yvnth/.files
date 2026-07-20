@@ -419,11 +419,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784482443,
-        "narHash": "sha256-1kvb5TGEzL+2tncfk1FRrCh+04A2BPis3Edht7HSaTQ=",
+        "lastModified": 1784533847,
+        "narHash": "sha256-3JsFaIFXfvPcYck8bWUjyJbeShc9AP1mM8Xk9H5xd0E=",
         "owner": "yvnth",
         "repo": "nixmacs",
-        "rev": "c138fb62b50bce2d1616ef5fa20ad4ee27aeb7c7",
+        "rev": "cb6533e355fa7247b40afe787eebf2096a96f4ec",
         "type": "github"
       },
       "original": {
