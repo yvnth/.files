@@ -4,7 +4,6 @@
     ./btop
     ./fastfetch
     ./git
-    ./helix
     ./java
     ./lazydocker
     ./lazygit

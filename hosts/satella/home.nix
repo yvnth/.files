@@ -12,7 +12,6 @@
     btop.enable = true;
     fastfetch.enable = true;
     git.enable = true;
-    helix.enable = true;
     java.enable = true;
     lazydocker.enable = true;
     lazygit.enable = true;

@@ -76,6 +76,7 @@
     typescript
     typst
     unzip
+    vis
     vscode
     waytrogen
     wget
