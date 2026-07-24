@@ -1,6 +1,6 @@
-#+title: Bootstrap process
-#+author: yvnth
-#+options: toc:nil
+#+TITLE: Bootstrap process
+#+AUTHOR: Yashwanth Prasannakumar (yvnth)
+#+OPTIONS: toc:nil
 
 ** 1. Git install
 

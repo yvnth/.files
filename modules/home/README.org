@@ -1,6 +1,6 @@
-#+title: Home Modules
-#+author: yvnth
-#+options: toc:nil
+#+TITLE: Adding a new user-level module
+#+AUTHOR: Yashwanth Prasannakumar (yvnth)
+#+OPTIONS: toc:nil
 
 Each module lives in its own directory under =modules/home/=.
 

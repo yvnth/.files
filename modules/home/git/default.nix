@@ -13,7 +13,7 @@
 
         init.defaultBranch = "master";
 
-        core.editor = "vis";
+        core.editor = "hx";
       };
     };
   };

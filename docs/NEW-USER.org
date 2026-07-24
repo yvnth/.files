@@ -1,6 +1,6 @@
-#+title: Adding a New User
-#+author: yvnth
-#+options: toc:nil
+#+TITLE: Adding a New User
+#+AUTHOR: Yashwanth Prasannakumar (yvnth)
+#+OPTIONS: toc:nil
 
 ** 1. Add User to System Config
 

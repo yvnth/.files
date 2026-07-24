@@ -1,6 +1,6 @@
-#+title: Adding a New Host
-#+author: yvnth
-#+options: toc:nil
+#+TITLE: Adding a New Host
+#+AUTHOR: Yashwanth Prasannakumar (yvnth)
+#+OPTIONS: toc:nil
 
 ** 1. Create Host Directory
 

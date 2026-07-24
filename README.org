@@ -1,6 +1,6 @@
-#+title: NixOS dotfiles ❄️
-#+author: yvnth
-#+options: toc:nil
+#+TITLE: NixOS dotfiles ❄️
+#+AUTHOR: Yashwanth Prasannakumar (yvnth)
+#+OPTIONS: toc:nil
 
 Personal [[https://nixos.org/][NixOS]] configuration, managed with [[https://github.com/nix-community/home-manager][home-manager]] and [[https://wiki.nixos.org/wiki/Flakes][flakes]].
 

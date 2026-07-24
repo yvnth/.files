@@ -1,6 +1,6 @@
-#+title: Core Modules
-#+author: yvnth
-#+options: toc:nil
+#+TITLE: Adding a new system-level module
+#+AUTHOR: Yashwanth Prasannakumar (yvnth)
+#+OPTIONS: toc:nil
 
 Each module lives as a =.nix= file under =modules/core/=.
 
