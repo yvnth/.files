@@ -5,15 +5,20 @@
   config = lib.mkIf config.homeModules.git.enable {
     programs.git = {
       enable = true;
+
       settings = {
         user = {
           name = "yvnth";
-          email = "yvnth@users.noreply.github.com";
+          email = "yashupress@gmail.com";
+          signingkey = "D9AAB78D42E14B5C08C0C2BE9012022165D97825";
         };
 
         init.defaultBranch = "master";
 
         core.editor = "hx";
+
+        commit.gpgsign = true;
+        gpg.format = "openpgp";
       };
     };
   };
