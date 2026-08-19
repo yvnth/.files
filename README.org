@@ -26,9 +26,8 @@ secrets/          # sops-nix encrypted secrets, per host/user
 - [[file:secrets/README.org][Managing secrets]]
 
 * Stack
-
-- *Boot:* [[https://github.com/nix-community/lanzaboote][Lanzaboote]]
-- *Disk layout:* BTRFS encrypted root via [[https://github.com/nix-community/disko][disko]]
+- *My editor of choice:* [[https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html][Emacs]] • [[https://github.com/yvnth/nixmacs][My Emacs Config]]
+- *Secure Boot:* [[https://github.com/nix-community/lanzaboote][Lanzaboote]]
 - *Secrets:* [[https://github.com/Mic92/sops-nix][sops-nix]]
-- *Theming:* [[https://github.com/nix-community/stylix][stylix]]
-- *Window manager:* [[https://github.com/mangowm/mango][mango]]
+- *Theming:* [[https://github.com/nix-community/stylix][Stylix]]
+- *Window manager:* [[https://qtile.org][Qtile]]

@@ -13,7 +13,6 @@
     xdg.configFile."vesktop/settings.json" = {
       text = builtins.toJSON {
         discordBranch = "stable";
-        minimizeToTray = true;
         arRPC = true;
         audio = {
           audioGainControl = false;

@@ -22,11 +22,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    mangowm = {
-      url = "github:mangowm/mango";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
@@ -38,6 +33,10 @@
 
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
+    };
+
+    nixpkgs-qtile = {
+      url = "github:NixOS/nixpkgs/83b8ff5ad36094db6f339a8151cade8f01caaa0d";
     };
 
     sops-nix = {
@@ -54,11 +53,6 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    waybar = {
-      url = "github:Alexays/Waybar";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -67,41 +61,53 @@
       fast-nix-gc,
       home-manager,
       lanzaboote,
-      mangowm,
       nix-flatpak,
       nixmacs,
       nixpkgs,
+      nixpkgs-qtile,
       sops-nix,
       spicetify-nix,
       stylix,
-      waybar,
       ...
     }@inputs:
+    let
+      system = "x86_64-linux";
+
+      qtile =
+        (import nixpkgs-qtile {
+          inherit system;
+        }).python3Packages.qtile.overrideAttrs
+          (_: {
+            dontUsePytestCheck = true;
+          });
+    in
     {
       nixosConfigurations.satella = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
+
         specialArgs = {
-          inherit inputs;
+          inherit inputs qtile;
         };
 
         modules = [
           ./hosts/satella/configuration.nix
+
           disko.nixosModules.disko
           fast-nix-gc.nixosModules.default
           home-manager.nixosModules.home-manager
           lanzaboote.nixosModules.lanzaboote
-          mangowm.nixosModules.mango
           nix-flatpak.nixosModules.nix-flatpak
           sops-nix.nixosModules.sops
           stylix.nixosModules.stylix
 
           {
             nixpkgs.overlays = [
-              waybar.overlays.default
               nixmacs.inputs.emacs-overlay.overlays.default
+
               (final: prev: {
                 xdg-desktop-portal-wlr = prev.xdg-desktop-portal-wlr.overrideAttrs (_: {
                   version = "0.7.0";
+
                   src = prev.fetchFromGitHub {
                     owner = "emersion";
                     repo = "xdg-desktop-portal-wlr";
@@ -116,11 +122,14 @@
           {
             home-manager = {
               backupFileExtension = "bak";
+
               extraSpecialArgs = {
                 inherit inputs;
               };
+
               useGlobalPkgs = true;
               useUserPackages = true;
+
               users.yvnth = {
                 imports = [
                   ./hosts/satella/home.nix

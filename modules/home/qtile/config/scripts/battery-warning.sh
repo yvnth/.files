@@ -3,7 +3,7 @@
 CRIT_LOW_ID=9999
 CRIT_FULL_ID=9998
 
-ICON_DIR="$HOME/.config/mango/assets"
+ICON_DIR="$HOME/.config/qtile/assets"
 
 notified_low=false
 notified_full=false
@@ -14,14 +14,14 @@ while true; do
 
     if [ "$status" = "Discharging" ]; then
         if [ "$notified_full" = true ]; then
-            notify-send -r $CRIT_FULL_ID -t 1 ""
+            notify-send -r "$CRIT_FULL_ID" -t 1 ""
             notified_full=false
         fi
 
         if [ "$battery" -le 5 ] && [ "$notified_low" = false ]; then
             notify-send \
                 -u critical \
-                -r $CRIT_LOW_ID \
+                -r "$CRIT_LOW_ID" \
                 -i "$ICON_DIR/battery-empty.svg" \
                 "Critical Battery — ${battery}%" \
                 "Charge immediately to prevent shutdown."
@@ -31,14 +31,14 @@ while true; do
 
     else
         if [ "$notified_low" = true ]; then
-            notify-send -r $CRIT_LOW_ID -t 1 ""
+            notify-send -r "$CRIT_LOW_ID" -t 1 ""
             notified_low=false
         fi
 
         if [ "$battery" -ge 100 ] && [ "$notified_full" = false ]; then
             notify-send \
                 -u critical \
-                -r $CRIT_FULL_ID \
+                -r "$CRIT_FULL_ID" \
                 -i "$ICON_DIR/battery-full.svg" \
                 "Battery Full — ${battery}%" \
                 "Unplug to preserve battery health."

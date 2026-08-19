@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, qtile, ... }:
 {
   imports = [
     ./disko.nix
@@ -39,15 +39,30 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   programs = {
-    mango.enable = true;
     xwayland.enable = true;
     zsh.enable = true;
   };
 
   security.pam.services.swaylock = { };
 
+  services.xserver = {
+    enable = true;
+
+    windowManager.qtile = {
+      enable = true;
+      package = qtile;
+
+      extraPackages =
+        python3Packages: with python3Packages; [
+          pyxdg
+          qtile-extras
+        ];
+    };
+  };
+
   services.displayManager.ly = {
     enable = true;
+
     settings = {
       animation = "matrix";
       bigclock = "en";
@@ -60,6 +75,7 @@
     description = "yvnth";
     shell = pkgs.zsh;
     initialPassword = "changeme";
+
     extraGroups = [
       "wheel"
       "networkmanager"
@@ -72,7 +88,24 @@
 
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
+
+    config = {
+      qtile = {
+        default = [
+          "wlr"
+          "gtk"
+        ];
+
+        "org.freedesktop.impl.portal.ScreenCast" = [
+          "wlr"
+        ];
+      };
+    };
+
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+    ];
   };
 
   system.stateVersion = "25.11";

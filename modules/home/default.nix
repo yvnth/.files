@@ -8,18 +8,17 @@
     ./kitty
     ./lazydocker
     ./lazygit
-    ./mango
+    ./mako
     ./nix-search
+    ./qtile
     ./rofi
     ./scripts
     ./shell
     ./spicetify
     ./starship
     ./swaylock
-    ./swaync
     ./tmux
     ./vesktop
-    ./waybar
     ./wezterm
     ./yazi
     ./zathura
