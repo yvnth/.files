@@ -6,11 +6,63 @@ from libqtile.lazy import lazy
 
 from .env import mod, terminal
 
+
+def resize_layout(qtile, direction):
+    layout = qtile.current_layout
+    layout_name = layout.__class__.__name__
+
+    command = getattr(layout, f"grow_{direction}", None)
+
+    if command is not None:
+        command()
+        return
+
+    if layout_name in (
+        "MonadTall",
+        "MonadWide",
+        "MonadThreeCol",
+    ):
+        if direction in ("down", "right"):
+            command = getattr(layout, "grow", None)
+        elif direction in ("up", "left"):
+            command = getattr(layout, "shrink", None)
+
+        if command is not None:
+            command()
+        return
+
+    if layout_name == "Plasma":
+        if direction == "left":
+            layout.grow_width(10)
+        elif direction == "right":
+            layout.grow_width(-10)
+        elif direction == "up":
+            layout.grow_height(10)
+        elif direction == "down":
+            layout.grow_height(-10)
+
+
 keys = [
-    Key([mod], "h", lazy.layout.left()),
-    Key([mod], "j", lazy.layout.down()),
-    Key([mod], "k", lazy.layout.up()),
-    Key([mod], "l", lazy.layout.right()),
+    Key(
+        [mod],
+        "h",
+        lazy.layout.left(),
+    ),
+    Key(
+        [mod],
+        "j",
+        lazy.layout.down(),
+    ),
+    Key(
+        [mod],
+        "k",
+        lazy.layout.up(),
+    ),
+    Key(
+        [mod],
+        "l",
+        lazy.layout.right(),
+    ),
 
     Key(
         [mod, "shift"],
@@ -36,22 +88,22 @@ keys = [
     Key(
         [mod, "control"],
         "h",
-        lazy.layout.grow_left(),
+        lazy.function(resize_layout, "left"),
     ),
     Key(
         [mod, "control"],
         "j",
-        lazy.layout.grow_down(),
+        lazy.function(resize_layout, "down"),
     ),
     Key(
         [mod, "control"],
         "k",
-        lazy.layout.grow_up(),
+        lazy.function(resize_layout, "up"),
     ),
     Key(
         [mod, "control"],
         "l",
-        lazy.layout.grow_right(),
+        lazy.function(resize_layout, "right"),
     ),
 
     Key(
@@ -238,6 +290,7 @@ keys = [
     ),
 ]
 
+
 for vt in range(1, 8):
     keys.append(
         Key(
@@ -249,9 +302,6 @@ for vt in range(1, 8):
         )
     )
 
-from libqtile.config import Key
-
-from .env import mod
 
 from .rules import groups
 
